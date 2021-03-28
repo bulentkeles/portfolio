@@ -11,7 +11,7 @@
 }
 
 
-/* colors */
+/* colors */  
 
 .color-oxford {
   background-color: #0D203F;
@@ -117,13 +117,12 @@ header {
 }
 
 body {
-  background: #FAFAFA;
-  color: rgba(0,0,0,.64);
+  background: #F9F9FB;
+  color:#0D203F;
   font-family: 'termina', sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
-  text-align: center;
   -webkit-font-smoothing: antialiased;
   transition: background-color 1s ease;
   -webkit-animation: fadeIn 2000ms;
@@ -133,7 +132,7 @@ body {
 
   ::selection {
     /* background-color: rgba(0,0,0,.16); */
-    background-color: #000;
+    background-color: #00B0ED;
   }
 
 
@@ -170,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 56px;
-  color: #000;
+  color: #0D203F;
   line-height: 64px;
   font-weight: 800;
   }
@@ -189,10 +188,9 @@ h1 {
   }
 
 h2 {
-  font-size: 36px;
-  line-height: 48px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.24);
+  font-size: 44px;
+  line-height: 56px;
+  color:#0D203F;
 }
 @media (max-width: 767px) {
 h2 {
@@ -232,13 +230,6 @@ h5.overline {
 }
 
 
-.tagline {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    color: rgba(0,0,0,.48);
-  }
-
 .overline {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -255,38 +246,29 @@ h5.overline {
     color: rgba(0,0,0,.48);
   }
 
-.works {
-  margin-left:2%;
-  margin-right:2%;
-}
 
-@media (max-width:600px) {
-  .works {
-    margin:0;
-  }
-}
 
+main {
+max-width: 1600px;
+margin: 0px 32px;
+}
 
 .section-title {
-margin:0 auto;
-max-width: 1280px;
 margin-top: 120px;
 margin-bottom: 120px;
-width: 92%;
+width: 72%;
 }
 @media (max-width:1200px) {
   .section-title {
-    margin-top: 96px;
-    margin-bottom: 96px;
+    width:88%;
   }
 }
 
 @media (max-width:767px) {
-  .section-title h1 {
-    margin:0 auto;
+  .section-title h2 {
     font-size: 32px;
-    line-height: 36px;
-    width: 96%;
+    line-height: 40px;
+    width: 100%;
   }
 }
 
@@ -505,6 +487,10 @@ span {
   text-decoration: none;
 }
 
+.section-title span {
+  color:#00B0ED;
+} 
+
 span.dot {
     color:#00B0ED;
 }
@@ -606,29 +592,29 @@ span.dot {
 
 
 .social {
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
 }
 
 .social li {
-  display: inline;
+  display: inline-block;
   }
 
 .social a {
   display: inline-block;
   padding: 12px 12px;
-  color: rgba(0,0,0,1);
+  color:rgba(13, 32, 63, 1);
   -webkit-transition: color 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -moz-transition: color 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: color 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .social a:hover {
-  color: rgba(0,0,0,.48);
+  color:rgba(13, 32, 63, .36);
 }
 
 .jancock {
-  color: rgba(0,0,0,.48);
+  color:rgba(13, 32, 63, .36);
   text-align: center;
 }
 
@@ -831,64 +817,89 @@ input[type=submit]:hover {
 }
 
 
-nav a {
-	position: relative;
-	display: inline-block;
-	margin: 48px 24px;
-	outline: none;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 600;
-	text-shadow: 0 0 1px rgba(0,0,0,0.3);
-	font-size: 12px;
+
+
+
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  padding:16px;
 }
-@media (max-width:600px) {
-  nav a {
-  	margin: 24px 8px;
-    font-size: 10px;
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: #0D203F;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px; 
+  line-height: 16px;
+  border-radius: 4px;
+  padding:16px;
+}
+
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 14px;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  color:rgba(13, 32, 63, .36)
+}
+
+/* Style the active/current link*/
+.header a.active {
+  color:rgba(13, 32, 63, .36)
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* When the screen is less than 767 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the header (.icon) */
+@media screen and (max-width: 767px) {
+  .header a:not(.logo) {display: none;}
+  .header a.icon {
+    float: right;
+    display: block;
   }
 }
 
-nav a:hover,
-nav a:focus {
-	outline: none;
+
+/* The "responsive" class is added to the header with JavaScript when the user clicks on the icon. This class makes the header look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 767px) {
+  .header.responsive {position: relative;}
+  .header.responsive a.icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  .header.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+/* Hide the link that should open and close the header on small screens */
+.header .icon {
+  display: none;
 }
 
 
-/* Effect: bottom line slides/fades in */
-.cl-effect a {
-	padding: 6px 0;
-}
 
-.cl-effect > .active {
-  color:#000;
-}
 
-.cl-effect a::after {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: rgba(0,0,0,1);
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transform: translateY(8px);
-	-moz-transform: translateY(8px);
-	transform: translateY(8px);
-}
 
-.cl-effect a:hover::after,
-.cl-effect a:focus::after {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
-}
+
 
 
 
@@ -1035,10 +1046,19 @@ button.accordion {
  }
 
 
+/* back to top */
+
+.backtotop {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
 /* Footer */
 footer {
-  text-align: center;
-  display: inline-block;
+  margin: 0 auto;
   margin-top: 72px;
   padding-bottom: 120px;
 }
