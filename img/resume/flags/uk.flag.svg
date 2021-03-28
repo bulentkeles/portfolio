@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+
+
+  <defs>
+    <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3,.cls-5{fill:#fff;}.cls-3,.cls-4,.cls-6{fill-rule:evenodd;}.cls-4{fill:#33368e;}.cls-6,.cls-7{fill:#cd202a;}</style>
+  </defs>
+
+<g id="Layer_2" data-name="Layer 2">
+
+<g id="Layer_1-2" data-name="Layer 1">
+  <g class="cls-2">
+    <path class="cls-3" d="M256,256V0H0V256Z" transform="translate(0)"/>
+    <path class="cls-4" d="M256,256V0H0V256Z" transform="translate(0)"/>
+    <path class="cls-3" d="M177,256V166.68h79V89.32H177V0H76.75V89.32H0v77.36H76.75V256Z" transform="translate(0)"/>
+    <path class="cls-5" d="M0,19.27,256,174.38v61.8L0,81.06Z" transform="translate(0)"/>
+    <path class="cls-5" d="M256,19.27,0,174.39v61.79L256,81.06Z" transform="translate(0)"/>
+    <path class="cls-6" d="M256,103.31H158.56V0H97.61V103.31H0v49.38H97.61V256h61V152.69H256Z" transform="translate(0)"/>
+    <path class="cls-7" d="M0,50.54,63.72,89.32H30.77L0,69.93ZM0,204.89v20l76.75-46.7V166.68h-14Zm256,1.22V186.68l-32.87-20H190.19Zm0-176.64L177,77.56V89.32h13.61L256,49.51Z" transform="translate(0)"/>
+  </g></g></g></svg>

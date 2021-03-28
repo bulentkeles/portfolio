@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+
+  <defs>
+  <style>.cls-1{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{fill:#010101;}.cls-4{fill:#db1f26;}.cls-5{fill:#fecf0a;}</style>
+  </defs>
+
+<g id="Layer_2" data-name="Layer 2">
+<g id="Layer_1-2" data-name="Layer 1">
+<g class="cls-2">
+
+  <rect id="black_stripe" data-name="black stripe" class="cls-3" width="256" height="256"/>
+
+  <rect id="red_stripe" data-name="red stripe" class="cls-4" y="85.33" width="256" height="256"/>
+
+  <rect id="gold_stripe" data-name="gold stripe" class="cls-5" y="170.67" width="256" height="256"/>
+
+
+</g>
+</g>
+</g></svg>
