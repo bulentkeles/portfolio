@@ -11,7 +11,7 @@
 }
 
 
-/* colors */  
+/* colors */
 
 .color-oxford {
   background-color: #0D203F;
@@ -28,9 +28,14 @@
 
 main {
   margin:0 auto;
-  padding:40px;
+  max-width:1600px;
+  padding:20px;
   }
-
+@media (max-width:767px) {
+  main {
+    padding:12px;
+    }
+}
 
 
 
@@ -123,6 +128,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   transition: background-color 1s ease;
   -webkit-animation: fadeIn 2000ms;
@@ -167,24 +173,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 66px;
   color: #0D203F;
-  line-height: 80px;
+  line-height: 72px;
   font-weight: 800;
   }
 @media (max-width: 1200px) {
 h1 {
-    font-size: 40px;
+    font-size: 44px;
     line-height: 52px;
-    padding:0px 24px;
      }
   }
 @media (max-width: 767px) {
 h1 {
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 34px;
+    line-height: 44px;
      }
   }
+@media (max-width: 600px) {
+  h1 {
+      font-size: 28px;
+      line-height: 36px;
+       }
+    }
 
 h2 {
   font-size: 44px;
@@ -226,7 +237,7 @@ h5 {
 }
 
 h5.overline {
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -251,21 +262,21 @@ h5.overline {
 
 
 .section-title {
+margin:0 auto;
 margin-top: 120px;
 margin-bottom: 120px;
-width: 72%;
+max-width: 1240px;
 }
-@media (max-width:1200px) {
+@media (max-width:992px) {
   .section-title {
-    width:88%;
+  margin-top: 96px;
+  margin-bottom: 96px;
   }
 }
-
 @media (max-width:767px) {
-  .section-title h2 {
-    font-size: 32px;
-    line-height: 40px;
-    width: 100%;
+  .section-title {
+  margin-top: 72px;
+  margin-bottom: 72px;
   }
 }
 
@@ -486,7 +497,7 @@ span {
 
 .section-title span {
   color:#00B0ED;
-} 
+}
 
 span.dot {
     color:#00B0ED;
@@ -616,18 +627,52 @@ span.dot {
 }
 
 
+.featured-wrapper {
+  width:100%;
+  padding:20px;
+}
+
+.featured {
+  display: flex;
+  flex-flow:row;
+  margin-bottom: 72px;
+  width:100%;
+  background-color: rgba(0, 0, 0, .08);
+}
+
+.featured > div {
+  width:50%;
+}
+
+.featured-text {
+  text-align: left;
+  padding:40px;
+}
+
+.featured-text h2 {
+
+}
+
+.featured-afa {
+  background-image: url("../img/work/Featured/AFA/AFA-Fleet-53.svg");
+  background-repeat: no-repeat;
+  height:300px;
+  width:300px;
+}
+
+
 .flex-container {
   display: flex;
   flex-flow: wrap;
-  justify-content: start;
+  justify-content: space-between;
 }
 
 .thumbs {
   position: relative;
   top:0px;
   width: 33%;
-  padding:20px;
   transition: .3s ease-in-out;
+  padding:20px;
 }
 
 @media (max-width: 992px) {
@@ -639,7 +684,7 @@ span.dot {
 @media (max-width: 600px) {
   .thumbs {
   width: 100%;
-  padding: 0px;
+  padding:12px;
      }
 }
 
@@ -814,14 +859,19 @@ input[type=submit]:hover {
 }
 
 
-
-
-
+nav {
+  padding:0px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+@media (max-width:992px) {
+  nav {
+    padding:0px 12px;
+  }
+}
 
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  border-bottom: 1px solid rgba(0, 0, 0, .12);
 }
 
 /* Style the header links */
@@ -830,16 +880,16 @@ input[type=submit]:hover {
   color: #0D203F;
   text-align: center;
   text-decoration: none;
-  font-size: 14px; 
+  font-size: 14px;
   line-height: 24px;
-  padding:32px 40px;
+  padding:24px;
 }
-
-
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-/* .header a.logo {
-  padding-left:0px;
-} */
+@media (max-width:992px) {
+  .header a {
+    padding-left:12px;
+    padding-right:12px;
+  }
+}
 
 /* Change the background color on mouse-over */
 .header a:hover {
@@ -856,8 +906,8 @@ input[type=submit]:hover {
   float: right;
 }
 
-/* When the screen is less than 767 pixels wide, hide all links, except for the Logo. Show the link that contains should open and close the header */
-@media screen and (max-width: 767px) {
+/* When the screen is less than 992 pixels wide, hide all links, except for the Logo. Show the link that contains should open and close the header */
+@media screen and (max-width: 992px) {
   .header a:not(.logo) {display: none;}
   .header a.icon {
     float: right;
@@ -867,7 +917,7 @@ input[type=submit]:hover {
 
 
 /* The "responsive" class is added to the header with JavaScript when the user clicks on the icon. This class makes the header look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
   .header.responsive {position: relative;}
   .header.responsive a.icon {
     position: absolute;
