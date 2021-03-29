@@ -28,9 +28,14 @@
 
 main {
   margin:0 auto;
+  max-width:1600px;
   padding:20px;
   }
-
+@media (max-width:767px) {
+  main {
+    padding:12px;
+    }
+}
 
 
 
@@ -261,6 +266,18 @@ margin:0 auto;
 margin-top: 120px;
 margin-bottom: 120px;
 max-width: 1240px;
+}
+@media (max-width:992px) {
+  .section-title {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  }
+}
+@media (max-width:767px) {
+  .section-title {
+  margin-top: 72px;
+  margin-bottom: 72px;
+  }
 }
 
 
@@ -610,6 +627,34 @@ span.dot {
 }
 
 
+.featured-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+}
+
+.featured {
+  display: flex;
+  flex-flow:row;
+  margin-bottom: 72px;
+  width:100%;
+  background-color: rgba(0, 0, 0, .08);
+}
+
+.featured > div {
+  width:50%;
+  padding:120px;
+}
+
+.featured-afa {
+  background-image: url("../img/work/Featured/AFA/AFA-Fleet-53.svg");
+  background-repeat: no-repeat;
+  height:300px;
+  width:300px;
+}
+
+
 .flex-container {
   display: flex;
   flex-flow: wrap ;
@@ -633,6 +678,7 @@ span.dot {
 @media (max-width: 600px) {
   .thumbs {
   width: 100%;
+  padding:12px;
      }
 }
 
@@ -805,8 +851,6 @@ input[type=submit]:hover {
   margin-bottom: 120px;
   text-align: left;
 }
-
-
 
 
 nav {
