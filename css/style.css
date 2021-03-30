@@ -122,7 +122,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 
 body {
-  background: #F9F9FB;
+  background: #fff;
   color:#0D203F;
   font-family: 'termina', sans-serif;
   font-size: 14px;
@@ -203,6 +203,12 @@ h2 {
   font-weight: 400;
   color:rgba(0, 0, 0, .24);
 }
+@media (max-width: 992px) {
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+     }
+  }
 @media (max-width: 767px) {
 h2 {
     font-size: 24px;
@@ -519,7 +525,7 @@ span.dot {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: .8px;
   line-height: 24px;
@@ -528,15 +534,11 @@ span.dot {
   transition-duration: 0.4s;
   cursor: pointer;
   background-color: transparent;
+  border: 2px solid #0D203F;
+  margin: 96px 0px;
 }
 
-
-.btn-download {
-    border: 2px solid #0D203F;
-    margin: 96px 0px;
-}
-
-.btn-download:hover {
+.btn:hover {
     color:#fff;
     background-color: #0D203F;
 }
@@ -627,37 +629,88 @@ span.dot {
 }
 
 
+/* Add a separator between sections */
+
+  .section-separator {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+  }
+
+  .section-separator p {
+    padding: 1em;
+  }
+
+  .section-separator::before,
+  .section-separator::after {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    content: " ";
+    height: 0px;
+    border: .5px solid rgba(0, 0, 0, .24);
+  }
+
+
 .featured-wrapper {
   width:100%;
-  padding:20px;
 }
 
 .featured {
   display: flex;
-  flex-flow:row;
+  flex-direction:row;
+  justify-content: center;
   margin-bottom: 72px;
   width:100%;
-  background-color: rgba(0, 0, 0, .08);
+  height:480px;
 }
 
 .featured > div {
   width:50%;
+  padding:40px;
+}
+@media (max-width:767px;) {
+  .featured > div {
+    width:100%;
+    padding:20px;
+    display: block;
+  }
 }
 
 .featured-text {
   text-align: left;
-  padding:40px;
+  padding-right:40px;
+  background-color: rgba(13, 32, 63, .04);
 }
 
 .featured-text h2 {
-
+  font-weight:700;
+  color:#0D203F;
 }
 
-.featured-afa {
-  background-image: url("../img/work/Featured/AFA/AFA-Fleet-53.svg");
+.featured-text p {
+  text-align: left;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  padding:20px 0px;
+  width:80%;
+}
+
+
+.featured-img {
+  padding:40px;
+  background-origin: content-box;
+  height:480px;
+}
+
+.afa {
   background-repeat: no-repeat;
-  height:300px;
-  width:300px;
+  background-color: rgba(13, 32, 63, .24);
+  background-image: url("../img/work/Featured/AFA/AFA-Fleet-53.svg");
+  background-position: center;
 }
 
 
