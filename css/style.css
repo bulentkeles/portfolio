@@ -28,7 +28,7 @@
 
 main {
   margin:0 auto;
-  max-width:1600px;
+  max-width:1440px;
   padding:20px;
   }
 @media (max-width:767px) {
@@ -535,7 +535,6 @@ span.dot {
   cursor: pointer;
   background-color: transparent;
   border: 2px solid #0D203F;
-  margin: 96px 0px;
 }
 
 .btn:hover {
@@ -664,19 +663,16 @@ span.dot {
   justify-content: center;
   margin-bottom: 72px;
   width:100%;
-  height:480px;
+}
+@media (max-width:767px;) {
+  .featured {
+    flex-direction:column;
+  }
 }
 
 .featured > div {
   width:50%;
   padding:40px;
-}
-@media (max-width:767px;) {
-  .featured > div {
-    width:100%;
-    padding:20px;
-    display: block;
-  }
 }
 
 .featured-text {
@@ -695,7 +691,7 @@ span.dot {
   font-size: 20px;
   line-height: 32px;
   font-weight: 400;
-  padding:20px 0px;
+  padding:40px 0px;
   width:80%;
 }
 
@@ -703,7 +699,6 @@ span.dot {
 .featured-img {
   padding:40px;
   background-origin: content-box;
-  height:480px;
 }
 
 .afa {
