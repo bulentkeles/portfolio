@@ -654,7 +654,13 @@ span.dot {
 
 
 .featured-wrapper {
-  width:100%;
+  margin: 0 auto;
+  width:80vw;
+}
+@media (max-width:992px) {
+  .featured-wrapper {
+    width:100%;
+  }
 }
 
 .featured {
@@ -664,8 +670,9 @@ span.dot {
   margin-bottom: 72px;
   width:100%;
 }
-@media (max-width:767px;) {
+@media (max-width:767px) {
   .featured {
+    width:100%;
     flex-direction:column;
   }
 }
@@ -673,6 +680,11 @@ span.dot {
 .featured > div {
   width:50%;
   padding:40px;
+}
+@media (max-width:767px) {
+  .featured > div {
+    width:100%;
+  }
 }
 
 .featured-text {
@@ -699,6 +711,8 @@ span.dot {
 .featured-img {
   padding:40px;
   background-origin: content-box;
+  width:100%;
+  min-height:360px;
 }
 
 .afa {
