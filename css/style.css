@@ -10,22 +10,6 @@
   -ms-user-select: none; */
 }
 
-
-/* colors */
-
-.color-oxford {
-  background-color: #0D203F;
-}
-.color-process {
-  background-color: #00B0ED;
-}
-.color-papaya {
-  background-color: #FEF4DD;
-}
-.color-cultured {
-  background-color: #F9F9FB;
-}
-
 main {
   margin:0 auto;
   max-width:1440px;
@@ -36,7 +20,6 @@ main {
     padding:12px;
     }
 }
-
 
 
 @-webkit-keyframes fadeIn {
@@ -178,24 +161,7 @@ h1 {
   line-height: 72px;
   font-weight: 800;
   }
-@media (max-width: 1200px) {
-h1 {
-    font-size: 48px;
-    line-height: 56px;
-     }
-  }
-@media (max-width: 767px) {
-h1 {
-    font-size: 36px;
-    line-height: 48px;
-     }
-  }
-@media (max-width: 600px) {
-  h1 {
-      font-size: 28px;
-      line-height: 36px;
-       }
-    }
+
 
 h2 {
   font-size: 40px;
@@ -519,28 +485,45 @@ span.dot {
 }
 
 .btn {
-  font-family: 'termina', sans-serif;
-  color: #0D203F;
+  font-family: inherit;
+  border: 2px solid #0D203F;
+  color:#0D203F;
   padding: 12px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
+  min-width: 200px;
   letter-spacing: .8px;
   line-height: 24px;
   height:48px;
   text-transform: uppercase;
   transition-duration: 0.4s;
+  background: transparent;
   cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #0D203F;
 }
 
 .btn:hover {
-    color:#fff;
-    background-color: #0D203F;
+  background: #0D203F;
+  color: #fff;
 }
+
+
+/* Sizing material icons */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+/* Coloring material icons */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
 
 
 .caption {
@@ -662,8 +645,8 @@ span.dot {
   display: flex;
   flex-direction:row;
   justify-content: center;
-  margin-bottom: 72px;
   width:100%;
+  margin-bottom: 120px;
 }
 @media (max-width:767px) {
   .featured {
@@ -703,15 +686,7 @@ span.dot {
 }
 @media (max-width: 1200px) {
 .featured-text p {
-    font-size: 18px;
-    line-height:28px;
     width:100%;
-     }
-  }
-@media (max-width: 767px) {
-.featured-text p {
-    font-size: 16px;
-    line-height: 24px;
      }
   }
 
