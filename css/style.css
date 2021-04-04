@@ -12,7 +12,7 @@
 
 main {
   margin:0 auto;
-  max-width:1440px;
+  max-width:1600px;
   padding:20px;
   }
 @media (max-width:767px) {
@@ -169,18 +169,6 @@ h2 {
   font-weight: 400;
   color:rgba(0, 0, 0, .24);
 }
-@media (max-width: 992px) {
-h2 {
-    font-size: 32px;
-    line-height: 40px;
-     }
-  }
-@media (max-width: 767px) {
-h2 {
-    font-size: 24px;
-    line-height: 32px;
-     }
-  }
 
 
 h3 {
@@ -244,12 +232,21 @@ max-width: 1240px;
   margin-top: 96px;
   margin-bottom: 96px;
   }
+  h1 {
+    
+  font-size: 40px;
+  line-height: 52px;
+  }
 }
 @media (max-width:767px) {
   .section-title {
   margin-top: 72px;
   margin-bottom: 72px;
   }
+  h1 {
+    font-size: 30px;
+    line-height: 36px;
+    }
 }
 
 
@@ -271,13 +268,16 @@ max-width: 1240px;
   justify-content: space-between;
   margin-bottom: 72px;
   width:100%;
+  /* -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; */
 }
 .abt-wrap > div {
-  width:50%;
-  padding:24px;
+  width:25%;
+  padding:20px;
 }
 
-@media (max-width:767px) {
+@media (max-width:992px) {
   .abt-wrap {
     flex-direction: column;
     justify-content: center;
@@ -376,6 +376,10 @@ hr {
   padding:24px;
 }
 
+.edu-wrap .overline {
+  text-align: left;
+}
+
 @media (max-width:767px) {
   .edu-wrap {
     flex-direction: column;
@@ -439,6 +443,10 @@ hr {
   }
 }
 
+.xp-wrap .overline {
+  text-align: left;
+}
+
 
 .skillset {
   margin: 0 auto;
@@ -464,11 +472,13 @@ hr {
 }
 
 span {
+  font-weight: bold;
   text-decoration: none;
 }
 
 .section-title span {
   color:#00B0ED;
+  font-weight: 800;
 }
 
 span.dot {
@@ -619,6 +629,7 @@ span.dot {
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
+    margin: 48px 0px;
   }
 
   .section-separator p {
@@ -635,26 +646,39 @@ span.dot {
     border: .5px solid rgba(0, 0, 0, .24);
   }
 
-
 .featured-wrapper {
   margin: 0 auto;
   width:100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
 }
 
+
 .featured {
-  display: flex;
-  flex-direction:row;
-  justify-content: center;
-  width:100%;
-  margin-bottom: 120px;
+  position: relative;
+  top:0px;
+  width: 50%;
+  transition: .3s ease-in-out;
+  padding:20px;
 }
+
 @media (max-width:767px) {
   .featured {
-    flex-direction:column;
+    width: 100%;
   }
 }
 
-.featured > div {
+.featured:hover {
+  top:-12px;
+}
+
+.featured-img {
+  background:rgba(13, 32, 63, .48);
+} 
+
+
+/* .featured > div {
   width:50%;
   padding:64px 40px;
 }
@@ -696,7 +720,8 @@ span.dot {
   background-origin: content-box;
   width:100%;
   min-height:360px;
-}
+} 
+
 
 .afa {
   background-repeat: no-repeat;
@@ -704,6 +729,15 @@ span.dot {
   background-image: url("../img/work/featuredshots/AFA/AFA-Fleet-53.svg");
   background-position: center;
 }
+
+.parental-controls {
+  background-repeat: no-repeat;
+  background-color: rgba(13, 32, 63, .24);
+  background-image: url("../img/work/featuredshots/parental-controls/thumb-parental-control@2x.png");
+  background-position: center;
+}
+*/
+
 
 
 .flex-container {
@@ -1156,7 +1190,6 @@ button.accordion {
   display: flex;
   justify-content: center;
 }
-
 
 
 
