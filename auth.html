@@ -1,92 +1,61 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title></title>
-
+<title>Enter Password</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="alternate" type="application/rss+xml" href="http://bulentkeles.com/feed.xml" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:weight@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/ysm4mgp.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="js/smooth.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/header.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43972553-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-43972553-1');
+</script>
 </head>
-
-<style>
-
-.box {
-	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 36px;
-}
-
-.lightbox {
-	zoom: 1.5;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(10, 10, 10, 0.8);
-	text-align: center;
-	margin: auto;
-
-}
-
-div.horizontal {
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
-
-div.vertical {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-}
-
-::-webkit-input-placeholder {
-   color: #00B0ED;
-   text-align: center;
-}
-
-::-moz-placeholder {
-   color: #00B0ED;
-   text-align: center;
-}
-
-:-ms-input-placeholder {
-   color: #00B0ED;
-   text-align: center;
-}
-
-</style>
-
 <body>
 
+
+
+
 	<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<div class="vertical">
+
 				<div class="box">
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
+					<div>
+						<h3>Please enter the password given to you to access the case study</h3>
+					</div>
+					<div class="">
+						<input class="btn-input" id="password" type="password" placeholder="enter password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'enter password'" />
+					</div>
+					<div class="">
+						<button class="btn pass" id="loginbutton" type="button">Submit</button>
+					</div>
 					<p id="wrongPassword" style="display: none">wrong password</p>
-				</div>
-			</div>
 		</div>
 	</div>
 
 
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-
-	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 
 	<script type="text/javascript">
 	"use strict";
-
 
 	function loadPage(pwd) {
 
 		var hash= pwd;
 		hash= Sha1.hash(pwd);
-		var url= hash + "/index.html";
+		var url= hash + "/parental-controls.html";
 
 		$.ajax({
 			url : url,
