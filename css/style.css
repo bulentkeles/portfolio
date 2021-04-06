@@ -979,7 +979,7 @@ nav {
 /* My Process */
 .process-wrap {
   margin:auto;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
   width: 100%;
   max-width:1240px;
 }
@@ -1083,6 +1083,7 @@ button.accordion {
 .testimonial-wrap {
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   max-width: 1240px;
@@ -1093,7 +1094,14 @@ button.accordion {
   background: rgba(0, 0, 0, 0.04);
   border-radius: 12px;
   padding:48px;
+  margin:20px 0px;
   width:48%;
+}
+
+@media (max-width:767px) {
+  .testimonial {
+    width: 100%;
+  }
 }
 
 
