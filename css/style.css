@@ -1019,21 +1019,38 @@ margin:24px 0px;
 .process-content {
   background: rgba(0, 0, 0, 0.04);
   border-radius: 12px;
-  padding:72px;
+  padding:72px 0px;
 }
 
 .process-content-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 48px;
+  align-items: center;
+  margin: 48px;
+}
+@media (max-width:767px) {
+  .process-content-block {
+  flex-direction: column;
+  margin: 20px;
+  }
 }
 
 .process-content-block > div {
   width: 30%;
-  background: rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.08);
   padding:20px;
   border-radius: 12px;
+  font-size:12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin:10px 0px;
+}
+@media (max-width:767px) {
+  .process-content-block > div {
+  width: 100%;
+  }
 }
 
 /* FAQ */
