@@ -993,46 +993,52 @@ nav {
 
 
 
-
-
-
-
-
 /* My Process */
 .process-wrap {
   margin:auto;
-  margin-bottom: 20px;
-  width: 100%;
   max-width:1240px;
+  margin-bottom:20px;
 }
 
-.process-description {
+.process-wrap p {
 text-align: center;
-margin:24px 0px;
+margin:36px 0px;
 }
 
 .process-title {
   margin-bottom: 24px;
 }
 
-
-.process-content {
+.process-container {
   background: rgba(0, 0, 0, 0.04);
   border-radius: 12px;
-  padding:72px 0px;
+  padding:40px;
+} 
+@media (max-width:767px) {
+  .process-container {
+    padding:20px;
+  }
 }
+
+.process-loop {
+  background-image: url(../img/about/loop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 72%;
+  height: 320px;
+  margin:40px 0px;
+}
+
 
 .process-content-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 48px;
 }
 @media (max-width:767px) {
   .process-content-block {
   flex-direction: column;
-  margin: 20px;
   }
 }
 
@@ -1053,6 +1059,9 @@ margin:24px 0px;
   }
 }
 
+
+
+
 /* FAQ */
 .faq-wrap {
   margin:auto;
@@ -1069,6 +1078,9 @@ margin:24px 0px;
 .faq-title {
 margin-bottom: 24px;
 }
+
+
+
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
