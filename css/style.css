@@ -1015,12 +1015,26 @@ margin:24px 0px;
   margin-bottom: 24px;
 }
 
+
 .process-content {
   background: rgba(0, 0, 0, 0.04);
   border-radius: 12px;
-  height:400px;
+  padding:72px;
 }
 
+.process-content-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.process-content-block > div {
+  width: 30%;
+  background: rgba(0, 0, 0, 0.12);
+  padding:20px;
+  border-radius: 12px;
+}
 
 /* FAQ */
 .faq-wrap {
