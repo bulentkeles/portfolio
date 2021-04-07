@@ -17,7 +17,7 @@ main {
   }
 @media (max-width:767px) {
   main {
-    padding:12px;
+    padding:16px;
     }
 }
 
@@ -217,10 +217,6 @@ h5.overline {
     color: rgba(0,0,0,.48);
   }
 
-
-
-
-
 .section-title {
 margin:0 auto;
 margin-top: 120px;
@@ -233,7 +229,6 @@ max-width: 1240px;
   margin-bottom: 96px;
   }
   h1 {
-
   font-size: 40px;
   line-height: 52px;
   }
@@ -247,6 +242,10 @@ max-width: 1240px;
     font-size: 30px;
     line-height: 36px;
     }
+  h2 {
+    font-size:30px;
+    line-height: 36px;
+  }
 }
 
 
@@ -264,7 +263,7 @@ max-width: 1240px;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
-  max-width: 1280px;
+  max-width: 1240px;
   justify-content: space-between;
   margin-bottom: 72px;
   width:100%;
@@ -286,6 +285,7 @@ max-width: 1240px;
   }
   .abt-wrap > div {
     width:100%;
+    padding:20px 0px;
   }
 }
 
@@ -420,23 +420,6 @@ hr {
 }
 
 
-.lang-wrap {
-  margin: auto;
-  display: flex;
-  flex-wrap: row;
-  margin-top:120px;
-  margin-bottom:120px;
-  max-width: 1280px;
-  width:100%;
-}
-
-@media (max-width:992px) {
-  .lang-wrap {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 
 .xp-wrap {
   margin: 0 auto;
@@ -476,12 +459,13 @@ hr {
   line-height:104px;
   font-weight: 700;
   padding: 48px;
-  max-width: 1280px;
+  max-width: 1240px;
   color:#DDD;
   text-align: center;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  margin-bottom:48px;
 }
 @media (max-width:767px) {
   .skillset {
@@ -489,7 +473,7 @@ hr {
     font-size: 40px;
     font-weight:700;
     line-height: 56px;
-    padding: 72px 24px 72px 24px;
+    padding: 24px 12px;
   }
 }
 
@@ -566,11 +550,34 @@ span.dot {
   margin-bottom: 32px;
 }
 
+
+.lang-wrap {
+  margin: auto;
+  display: flex;
+  flex-wrap: row;
+  margin-top:120px;
+  margin-bottom:120px;
+  max-width: 1280px;
+  width:100%;
+}
+@media (max-width:776px) {
+  .lang-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
 .passport {
   margin:20px;
-  background: rgba(0,176,237,.12);
+  background: rgba(13, 32, 63, .04);
   border-radius: 12px;
   max-width:400px;
+}
+@media (max-width:992px) {
+  .passport {
+    margin:10px;
+  }
 }
 
 .passport p {
@@ -585,11 +592,6 @@ span.dot {
     padding: 48px 24px;
   }
 }
-
-.passport h1 {
-  color:#00B0ED;
-}
-
 
 
 .flag {
@@ -618,6 +620,7 @@ span.dot {
 .social {
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .social li {
@@ -626,7 +629,7 @@ span.dot {
 
 .social a {
   display: inline-block;
-  padding: 12px 12px;
+  padding: 8px 12px;
   color:rgba(13, 32, 63, 1);
   -webkit-transition: color 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -moz-transition: color 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -637,10 +640,7 @@ span.dot {
   color:rgba(13, 32, 63, .36);
 }
 
-.jancock {
-  color:rgba(13, 32, 63, .36);
-  text-align: center;
-}
+
 
 
 /* Add a separator between sections */
@@ -1025,7 +1025,7 @@ margin:24px 0px;
 /* FAQ */
 .faq-wrap {
   margin:auto;
-  margin-bottom: 120px;
+  margin-bottom: 72px;
   width: 100%;
   max-width:1240px;
 }
@@ -1168,13 +1168,20 @@ button.accordion {
 .backtotop {
   display: flex;
   justify-content: center;
+  margin-bottom: 48px;
 }
 
+
+/* John Hancock */
+.jancock {
+  color:rgba(13, 32, 63, .36);
+  text-align: center;
+}
 
 
 /* Footer */
 footer {
   margin: 0 auto;
   margin-top: 72px;
-  padding-bottom: 120px;
+  padding-bottom: 144px;
 }
