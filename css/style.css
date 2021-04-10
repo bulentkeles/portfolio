@@ -1116,7 +1116,6 @@ nav {
   }
 }
 
-
 .testimonial .quote {
   font-family: 'DM Serif Display', serif;
   color: #fff;
@@ -1125,6 +1124,7 @@ nav {
   font-weight: 600;
   line-height: 1.25em;
 }
+*/
 
 .testimonial .avtr {
   height: 72px;
@@ -1145,13 +1145,12 @@ nav {
 }
 
 
-
 .testimonial .author {
   font-size:16px;
   color: rgba(255, 255, 255, .72);
   padding-top:48px;
   font-weight: 400;
- } */
+ } 
 
 
 
