@@ -1087,10 +1087,8 @@ nav {
 }
 
 
-
 /* Testimonial */
-
-/* .testimonial-wrap {
+.testimonial-wrap {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -1101,30 +1099,30 @@ nav {
   border-radius: 12px;
 }
 
+
 .testimonial {
-  background: rgba(13, 32, 63, 1);
+  background: rgba(13, 32, 63, .04);
   border-radius: 12px;
   padding:48px;
   margin:20px 0px;
   width:48%;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-@media (max-width:767px) {
+@media (max-width:992px) {
   .testimonial {
     width: 100%;
   }
 }
 
 .testimonial .quote {
-  font-family: 'DM Serif Display', serif;
-  color: #fff;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  color: rgba(13, 32, 63, 1);
   text-align: center;
-  font-size:2em;
-  font-weight: 600;
+  font-size:3em;
   line-height: 1.25em;
 }
-*/
+
 
 .testimonial .avtr {
   height: 72px;
@@ -1132,6 +1130,13 @@ nav {
   background-size: 72px;
   background-repeat: no-repeat;
 }
+
+.testimonial .author {
+  font-size:16px;
+  padding-top:48px;
+  font-weight: 400;
+  color: rgba(13, 32, 63, .48);
+ } 
 
 
 .avtr-bulent {
@@ -1143,14 +1148,6 @@ nav {
 .avtr-daniel {
   background-image: url("../img/avatar/avtr.daniel.400@2x.jpg");
 }
-
-
-.testimonial .author {
-  font-size:16px;
-  color: rgba(255, 255, 255, .72);
-  padding-top:48px;
-  font-weight: 400;
- } 
 
 
 
@@ -1168,8 +1165,6 @@ nav {
   text-align: center;
   margin:24px 0px;
 }
-
-
 
 
 /* Style the buttons that are used to open and close the accordion panel */
