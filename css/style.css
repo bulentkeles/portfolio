@@ -390,12 +390,12 @@ hr {
 }
 
 .chip-blue {
-  background-color:rgba(0, 176, 237, .12);
+  background-color:rgba(0, 176, 237, .08);
   color: rgba(0, 176, 237, 1);
 }
 
 .chip-orange {
-  background-color:rgba(255, 80, 0, .12);
+  background-color:rgba(255, 80, 0, .08);
   color:rgba(255, 80, 0, 1);
 
 }
@@ -479,9 +479,9 @@ hr {
   max-width: 1240px;
   color:#DDD;
   text-align: center;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
   margin-bottom:48px;
 }
 @media (max-width:767px) {
