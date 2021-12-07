@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 66px;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 1);
   line-height: 72px;
   font-weight: 800;
   }
@@ -167,7 +167,7 @@ h2 {
   font-size: 40px;
   line-height: 52px;
   font-weight: 400;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255,1);
 }
 
 
@@ -176,7 +176,7 @@ h3 {
   line-height: 28px;
   font-weight: 700;
   text-align: left;
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 1);
 }
 
 
@@ -962,7 +962,7 @@ nav {
 
 /* Change the color on mouse-over */
 .header a:hover {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Style the active/current link*/
