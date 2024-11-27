@@ -179,11 +179,15 @@ h2 {
 
 
 h3 {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 700;
   text-align: left;
   color: #0D203F;
+}
+
+h3 span {
+  color: #00B0ED;
 }
 
 
@@ -350,13 +354,13 @@ hr {
 }
 
 .chip {
-  padding: 10px 16px;
-  margin-top:6px;
-  margin-right:6px;
+  padding: 12px 16px;
+  margin-right:8px;
+  margin-top:8px;
   margin-bottom:6px;
-  height: 32px;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
   border-radius: 48px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -514,7 +518,6 @@ top: -12px;
 }
 
 span.dot { 
-    
     vertical-align: middle;
     color:#00B0ED;
   }
@@ -741,6 +744,10 @@ span.dot {
   padding:20px;
 }
 
+.thumbs img {
+  border-radius: 16px;
+}
+
 @media (max-width: 992px) {
   .thumbs {
   width: 50%;
@@ -758,6 +765,8 @@ span.dot {
 .thumbs:hover {
   top:-12px;
 }
+
+
 
 
 .title {
@@ -923,9 +932,8 @@ input[type=submit]:hover {
 
 
 nav {
-  padding:0px 24px;
-  border-bottom: 1px solid rgba(13, 32, 63, .2);
-  font-weight: 600
+  border-bottom: 1px solid rgba(13, 32, 63, .24);
+  font-weight: 600;
 }
 @media (max-width:992px) {
   nav {
@@ -944,7 +952,7 @@ nav {
   color: rgba(13, 32, 63, 1);
   text-align: center;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   padding:24px;
 }
