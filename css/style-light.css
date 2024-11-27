@@ -108,7 +108,7 @@ body {
   background: #fff;
   color:#0D203F;
   font-family: 'termina', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   text-align: center;
@@ -466,7 +466,7 @@ top: -12px;
 
 
 .job .overview {
-  width:50%;
+  width:40%;
   padding-right:32px;
   color: rgba(13, 32, 63, .64);
 }
@@ -478,8 +478,8 @@ top: -12px;
 
 .job .detail {
   color: rgba(13, 32, 63, .64);
-  width:50%;
-  padding-right:32px;
+  width:60%;
+  padding-left:16px;
 }
 @media (max-width:992px) {
   .job .detail {
@@ -502,6 +502,7 @@ top: -12px;
   margin-top:112px;
   margin-bottom:48px;
 }
+
 @media (max-width:767px) {
   .skillset {
     width:100%;
@@ -513,7 +514,7 @@ top: -12px;
 }
 
 span.dot { 
-    font-size:24px;
+    
     vertical-align: middle;
     color:#00B0ED;
   }
