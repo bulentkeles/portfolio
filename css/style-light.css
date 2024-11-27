@@ -105,7 +105,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 
 body {
-  background: #fff;
+  background: #f0f0f0;
   color:#0D203F;
   font-family: 'termina', sans-serif;
   font-size: 16px;
@@ -305,7 +305,7 @@ hr {
   margin: 0 auto;
   margin-top:112px;
   margin-bottom:112px;
-  border: 1px solid rgba(255, 255, 255, .8);  
+  border: 1px solid rgba(13, 32, 63, .16);
   max-width: 1280px;
 }
 
@@ -354,7 +354,7 @@ hr {
 }
 
 .chip {
-  padding: 12px 16px;
+  padding: 10px 12px;
   margin-right:8px;
   margin-top:8px;
   margin-bottom:6px;
@@ -364,8 +364,8 @@ hr {
   border-radius: 48px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color:rgba(13, 32, 63, 1);
-  color: #fff;
+  color: rgba(13, 32, 63, .48);
+  background-color: rgba(13, 32, 63, .12);
 }
 
 
@@ -392,10 +392,11 @@ hr {
   transition: .3s ease-in-out;
   margin-bottom:24px;
   border: 1px solid;
-  border-color: rgba(13, 32, 63, .64);
+  border-color: rgba(13, 32, 63, .16);
   border-radius: 12px;
-  padding: 48px 24px;
+  padding: 48px;
   margin: 24px;
+  background-color: #fff;
 }
 @media (max-width:776px) {
     .edu {
@@ -437,10 +438,6 @@ hr {
   }
 }
 
-.job .overline {
-  text-align: left;
-}
-
 
 .job {
   position: relative;
@@ -450,10 +447,11 @@ hr {
   flex-wrap: wrap;
   width:100%;
   border: 1px solid;
-  border-color: rgba(13, 32, 63, .64);
+  border-color: rgba(13, 32, 63, .16);
   border-radius: 12px;
-  padding: 48px 24px;
+  padding: 64px 48px;
   margin:24px;
+  background-color: #fff;
 }
 @media (max-width:767px) {
   .job {
@@ -464,6 +462,10 @@ hr {
   }
 }
 
+.job .overline {
+  text-align: left;
+}
+
 .job:hover {
 top: -12px;
 }
@@ -471,7 +473,7 @@ top: -12px;
 
 .job .overview {
   width:40%;
-  padding-right:32px;
+  padding-right:24px;
   color: rgba(13, 32, 63, .64);
 }
 @media (max-width:992px) {
@@ -483,7 +485,7 @@ top: -12px;
 .job .detail {
   color: rgba(13, 32, 63, .64);
   width:60%;
-  padding-left:16px;
+  padding-left:24px;
 }
 @media (max-width:992px) {
   .job .detail {
@@ -534,8 +536,8 @@ span.dot {
 
 .btn {
   font-family: inherit;
-  border: 1px solid;
-  color: rgba(13, 32, 63, 1);
+  border: 2px solid #00B0ED;
+  color: #fff;
   padding: 12px 32px;
   text-align: center;
   text-decoration: none;
@@ -548,13 +550,14 @@ span.dot {
   height:48px;
   text-transform: uppercase;
   transition-duration: 0.4s;
-  background: transparent;
+  background-color: #00B0ED;
   cursor: pointer;
 }
 
 .btn:hover {
-  background:rgba(13, 32, 63, 1);
-  color: #fff;
+  color: #00B0ED;
+  background:transparent;
+  border-color: #00B0ED;
 }
 
 
@@ -586,8 +589,9 @@ span.dot {
   top:0px;
   transition: .3s ease-in-out;
   border: 1px solid;
-  border-color: rgba(13, 32, 63, .64);
+  border-color: rgba(13, 32, 63, .16);
   border-radius: 12px;
+  background-color: #fff;
   margin: 24px;
 }
 @media (max-width:767px) {
@@ -601,9 +605,9 @@ span.dot {
 }
 
 .passport p {
-  color: rgba(13, 32, 63, 1);
+  color: rgba(13, 32, 63, .64);
   text-align:center;
-  padding:48px 24px;
+  padding:64px 48px;
 }
 @media (max-width: 992px) {
   .passport p {
@@ -683,7 +687,7 @@ span.dot {
     flex-basis: auto;
     content: " ";
     height: 0px;
-    border: 1px solid rgba(13, 32, 63, .2);
+    border: 1px solid rgba(13, 32, 63, .12);
   }
 
 
@@ -723,9 +727,10 @@ span.dot {
 }
 
 .featured-img {
-  background:rgba(13, 32, 63, .4);
+  border: 1px solid rgba(13, 32, 63, .08);
   border-radius: 40px;
 }
+
 
 
 
@@ -746,6 +751,7 @@ span.dot {
 
 .thumbs img {
   border-radius: 16px;
+  border: 1px solid rgba(13, 32, 63, .08);
 }
 
 @media (max-width: 992px) {
@@ -932,8 +938,9 @@ input[type=submit]:hover {
 
 
 nav {
-  border-bottom: 1px solid rgba(13, 32, 63, .24);
+  border-bottom: 1px solid rgba(13, 32, 63, .16);
   font-weight: 600;
+  background-color: #fff;
 }
 @media (max-width:992px) {
   nav {
@@ -1040,9 +1047,10 @@ nav {
 
 .process-container {
   border: 1px solid;
-  border-color: rgba(13, 32, 63, .64);
+  border-color: rgba(13, 32, 63, .16);
   border-radius: 12px;
   padding:40px;
+  background-color: #fff;
 }
 @media (max-width:767px) {
   .process-container {
@@ -1114,10 +1122,12 @@ nav {
   margin:0 auto;
   background-size: 160px;
   background-repeat: no-repeat;
-  width:160px;
-  height:160px;
   margin-bottom:36px;
   border-radius: 50%;
+  height: 72px;
+  width: 72px;
+  background-size: 72px;
+  background-repeat: no-repeat;
 }
 @media (max-width: 992px) {
   .avtr {
@@ -1151,35 +1161,53 @@ nav {
   width: 100%;
   max-width: 1280px;
   margin-bottom: 144px;
-  border-radius: 12px;
 }
 
 
 .testimonial {
   position: relative;
-  top:0px;
+  top: 0px;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 400;
+  text-align: center;
   border: 1px solid;
-  /* background: rgba(255, 255, 255, .08); */
-  border-color: rgba(13, 32, 63, .64);
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(13, 32, 63, .16);
   border-radius: 12px;
-  padding:48px;
-  margin:20px 0px;
-  width:48%;
+  padding: 48px;
+  margin: 20px 0px;
+  width: 48%;
   transition: .3s ease-in-out;
 }
+
 .testimonial:hover {
-  top:-12px;
+  top: -12px;
 }
-@media (max-width:992px) {
+
+@media (max-width: 992px) {
   .testimonial {
     width: 100%;
   }
 }
 
+.testimonial p {
+  color: #999;
+  font-size: 3em;
+  text-align: center;
+  line-height: 1.2em; /* Ensure the line-height on <p> matches */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+/* Hover effect on the parent .testimonial element */
+.testimonial:hover p {
+  color: #00B0ED;  /* Change the color of the <p> text when .testimonial is hovered */
+}
+
+
+/* 
 .testimonial .quote-left {
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
-  /* color: #fff; */
   text-align: center;
   font-size:3em;
   line-height: 1.25em;
@@ -1187,13 +1215,11 @@ nav {
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  -webkit-text-fill-color: transparent; 
 
 .testimonial .quote-right {
   font-family: 'Permanent Marker', cursive;
   font-weight: 400;
-  /* color: #fff; */
   text-align: center;
   font-size:3em;
   line-height: 1.25em;
@@ -1201,22 +1227,18 @@ nav {
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; 
 }
+*/
 
-.testimonial .avtr {
-  height: 72px;
-  width: 72px;
-  background-size: 72px;
-  background-repeat: no-repeat;
-}
 
 .testimonial .author {
-  font-size:16px;
   padding-top:48px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, .4);
- } 
+  font-family: 'termina', sans-serif;
+  font-size:16px;
+  line-height: 24px;
+  font-weight: 500;
+ }
 
 
 /* FAQ */
@@ -1245,9 +1267,14 @@ nav {
   position: relative;
   margin: 24px 0px;
   border: 1px solid;
-  border-color: rgba(13, 32, 63, .64);
+  background-color: #fff;
   border-radius: 8px;
+  border-color: rgba(13, 32, 63, .16);
   padding: 0px 24px;
+}
+
+.accordion .container:hover {
+  border-color: rgba(13, 32, 63, 1);
 }
 
 .accordion .label {
