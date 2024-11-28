@@ -836,7 +836,6 @@ span.dot {
 
 .img-comp-img img {
   display: block;
-  vertical-align: middle;
 }
 
 .img-comp-slider {
@@ -925,7 +924,7 @@ input[type=text], select, textarea {
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: rgba(13, 32, 63, 1);
-  color: #fff);
+  color: #fff;
   padding: 12px 40px;
   border: none;
   cursor: pointer;
@@ -962,6 +961,11 @@ nav {
 /* Header styling */
 .header {
   overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;         
+  top: 0;                   
+  z-index: 1000;            
+  background-color: #fff;   
 }
 
 /* Style the header links */
@@ -988,7 +992,7 @@ nav {
 
 /* Style the active/current link*/
 .header a.active {
-  color:color: rgba(13, 32, 63, 1);
+  color: rgba(13, 32, 63, 1);
 }
 
 /* Float the link section to the right */
@@ -1383,21 +1387,24 @@ footer {
 
 
 
+
 /* Slider Container Styles */
 .slider-container {
   width: 100%;
-  background-color: #0D203F; /* Background color */
+  background-color: #0D203F;
   overflow: hidden;
   position: relative;
-  padding: 32px 0;
+  padding: 32px 0px;
 }
+
 
 /* Text Slider Styles */
 .slider-text {
   display: flex;
-  width: 100%;
-  animation: slide 16s linear infinite;
+  width: 200%;  /* Set width to 200% to accommodate both sets of text */
+  animation: slide 20s linear infinite;
 }
+
 
 /* Individual Text Styles */
 .slider-text p {
@@ -1409,21 +1416,23 @@ footer {
   text-align: center;
 }
 
-/* Animation for the sliding effect */
+
+
+/* Smooth infinite scrolling animation */
 @keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0);  /* Start with both sets aligned */
   }
   25% {
-    transform: translateX(-25%);
+    transform: translateX(-25%); /* Move to the left as the first set starts exiting */
   }
   50% {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Halfway point, first set almost fully out */
   }
   75% {
-    transform: translateX(-75%);
+    transform: translateX(-75%); /* Move further left, second set entering view */
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Fully scroll to the left, second set takes full view */
   }
 }
