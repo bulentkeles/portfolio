@@ -156,36 +156,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.hero {
-  font-size: 156px;
-  line-height: 160px;
-  font-weight: 800;
-  color: #0D203F;
-}
-@media (max-width:992px) {
-  .hero {
-    font-size: 112px;
-    line-height: 136px;
-    font-weight: 800;
-  }
-}
-
-@media (max-width:768px) {
-  .hero {
-    font-size: 64px;
-    line-height: 80px;
-    font-weight: 800;
-  }
-}
-
-
-
-
-
-
 h1 {
-  font-size: 66px;
-  line-height: 72px;
+  font-size: 72px;
+  line-height: 88px;
   font-weight: 800;
   color: #0D203F;
   }
@@ -199,8 +172,8 @@ h1 span {
 
 
 h2 {
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 48px;
+  line-height: 64px;
   font-weight: 400;
   color: #0D203F;
 }
@@ -267,11 +240,6 @@ h5.overline {
     margin-top: 72px;
     margin-bottom: 72px;
   }
-
-  h2 {
-    font-size: 32px;
-    line-height: 44px;
-  }
 }
 @media (max-width:768px) {
   .section-title {
@@ -279,12 +247,12 @@ h5.overline {
     margin-bottom: 36px;
     }
   h1 {
-      font-size: 36px;
-      line-height: 48px;
+      font-size: 48px;
+      line-height: 56px;
     }
   h2 {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 40px;
     }
 }
 
