@@ -1,14 +1,169 @@
+/* CSS Variables */
+:root {
+  --font-family-base: 'termina', Arial, sans-serif;
+  --font-family-marker: 'Permanent Marker', cursive;
+  --border-radius: 12px;
+  --padding-base: 12px;
+  --transition-duration: 0.3s;
+  --shadow-hover: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+
+
+
+    /* Primary Colors */
+    --color-primary: #00B0ED; /* Blue */
+    --color-primary-light: #47caf5  ; /* Light Blue */
+    --color-primary-dark: #00698c; /* Dark Blue */
+    
+    /* Secondary Colors */
+    --color-secondary: rgba(13, 32, 63, 1); /* Navy */   
+    --color-secondary-light: rgba(13, 32, 63, 1); /* Navy */    
+    --color-secondary-dark: rgba(13, 32, 63, 1); /* Navy */    
+  
+    /* Background Colors */
+    --color-background: #f0f0f0; /* Light Surface */
+    
+    
+    /* Text Colors */
+    --color-text: rgba(13, 32, 63, 1); /* Navy */
+    --color-text-light:rgb(32, 63, 112); /* Light Navy */
+    --color-text-dark: rgb(7, 16, 30); /* Dark Navy */
+    
+    /* Accent Colors */
+    --color-accent: #f39c12; /* Orange */
+    --color-accent-light: #f7b731; /* Light Orange */
+    --color-accent-dark: #e67e22; /* Dark Orange */
+    
+    /* Status Colors */
+    --color-success: #2ecc71; /* Success Green */
+    --color-warning: #f39c12; /* Warning Yellow */
+    --color-danger: #e74c3c; /* Danger Red */
+    --color-info: #3498db; /* Info Blue */
+    
+    /* Border Colors */
+    --color-border: (var(--color-secondary))
+    
+    /* Shadow Colors */
+    --color-shadow-light: rgba(0, 0, 0, 0.1); /* Light Shadow */
+    --color-shadow-dark: rgba(0, 0, 0, 0.2); /* Dark Shadow */
+    
+    /* Transparent Colors */
+    --color-transparent-16: rgba(13, 32, 63, .16); /* Navy 16 */
+    --color-transparent-24: rgba(13, 32, 63, .24); /* Navy 24 */
+    --color-transparent-48: rgba(13, 32, 63, .48); /* Navy 48 */
+    --color-transparent-64: rgba(13, 32, 63, .64); /* Navy 64 */
+    
+  
+ 
+  /* Font sizes */
+  --font-size-base: 16px;
+  --font-size-1: 20px;
+  --font-size-2: 24px;
+  --font-size-3: 32px;
+  --font-size-4: 40px;
+  --font-size-5: 56px;
+  --font-size-6: 72px;
+
+  /* Line heights */
+  --line-height-base: 24px;
+  --line-height-1: 28px;
+  --line-height-2: 32px;
+  --line-height-3: 40px;
+  --line-height-4: 48px;
+  --line-height-5: 64px;
+  --line-height-6: 80px;
+  
+  /* Font weights for different heading levels */
+  --font-weight-1: 300;    /* Light weight for H2 */
+  --font-weight-2: 400;    /* Regular weight for ... */
+  --font-weight-3: 500;    /* Medium weight for base */
+  --font-weight-4: 600;    /* Demi weight for H3 */
+  --font-weight-5: 700;    /* Bold weight for ... */
+  --font-weight-6: 800;    /* Heavy weight for H1 */
+
+  
+  
+  
+}
+
+
+h1 {
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-2);
+  line-height: var(--line-height-5);
+}
+
+h3 {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-5);
+  line-height: var(--line-height-4);
+}
+
+h4 {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-height-3);
+}
+
+h5 {
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-5);
+  line-height: var(--line-height-2);
+}
+
+h6 {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-1);
+}
+
+p {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-base);
+  transition: height ,5s;
+  -webkit-transition: height ,5s;
+  -moz-transition: height ,5s;
+}
+
+
+
+/* General Reset */
 * {
+  margin:0 auto;
+  padding: 0;
   box-sizing: border-box;
-  margin:0;
-  padding:0;
-  user-drag: none;
   user-select: none;
-  /* -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  -ms-user-select: none; */
 }
+
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-3);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 1s ease;
+  -webkit-animation: fadeIn 2000ms;
+  -moz-animation: fadeIn 2000ms;
+  animation: fadeIn 2000ms;
+}
+
+
+  ::selection {
+    color: rgba(255, 255, 255, .24);
+  }
+
+
 
 main {
   margin:0 auto;
@@ -45,94 +200,13 @@ main {
   }
 
 
-/* Termina Thin
-
-font-family: termina, sans-serif;
-font-weight: 100;
-font-style: normal;
-
-Termina Extra Light
-
-font-family: termina, sans-serif;
-font-weight: 200;
-font-style: normal;
-
-Termina Light
-
-font-family: termina, sans-serif;
-font-weight: 300;
-font-style: normal;
-
-Termina Regular
-
-font-family: termina, sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Termina Medium
-
-font-family: termina, sans-serif;
-font-weight: 500;
-font-style: normal;
-
-Termina Demi
-
-font-family: termina, sans-serif;
-font-weight: 600;
-font-style: normal;
-
-Termina Bold
-
-font-family: termina, sans-serif;
-font-weight: 700;
-font-style: normal;
-
-Termina Heavy
-
-font-family: termina, sans-serif;
-font-weight: 800;
-font-style: normal;
-
-Termina Black
-
-font-family: termina, sans-serif;
-font-weight: 900;
-font-style: normal; */
-
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 
-body {
-  background: #f0f0f0;
-  color:#0D203F;
-  font-family: 'termina', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  transition: background-color 1s ease;
-  -webkit-animation: fadeIn 2000ms;
-  -moz-animation: fadeIn 2000ms;
-  animation: fadeIn 2000ms;
-  }
-
-  ::selection {
-    color: rgba(255, 255, 255, .24);
-  }
 
 
-p {
-  line-height: 24px;
-  display: block;
-  margin: 0;
-  text-align: left;
-  transition: height ,5s;
-  -webkit-transition: height ,5s;
-  -moz-transition: height ,5s;
-}
 
 
 a {
@@ -151,67 +225,10 @@ li {
   list-style-position: inside;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  display: block;
-}
 
 
-h1 {
-  font-size: 72px;
-  line-height: 88px;
-  font-weight: 800;
-  color: #0D203F;
-  }
-h1 span {
-  background-image: -webkit-linear-gradient(60deg, rgb(175, 87, 254), rgb(127, 112, 254), rgb(141, 208, 255));
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 
-h2 {
-  font-size: 48px;
-  line-height: 64px;
-  font-weight: 400;
-  color: #0D203F;
-}
-
-
-h3 {
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: 700;
-  text-align: left;
-  color: #0D203F;
-}
-
-h3 span {
-  color: #00B0ED;
-}
-
-
-h4 {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 600;
-  text-align: left;
-  color: #0D203F;
-}
-
-
-h5 {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 600;
-  text-align: left;
-  color: #0D203F;
-}
-
-h5.overline {
-  text-align: center;
-}
 
 
 .overline {
@@ -234,6 +251,7 @@ h5.overline {
   margin-top: 120px;
   margin-bottom: 120px;
   max-width: 1280px;
+  text-align: center;
 }
 @media (max-width:992px) {
   .section-title {
