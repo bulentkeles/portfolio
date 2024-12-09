@@ -1083,7 +1083,7 @@ nav {
   text-align: center;
   background: var(--color-bg-container);
   border-radius: 12px;
-  padding: 80px;
+  padding: 72px;
   margin: 20px 0px;
   width: 48%;
   transition: .3s ease-in-out;
@@ -1093,7 +1093,7 @@ nav {
   top: -12px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 787px) {
   .testimonial {
     width: 100%;
   }
@@ -1101,11 +1101,19 @@ nav {
 
 .testimonial p {
   color: var(--color-text-secondary);
-  font-size: 3em;
+  font-size: var(--font-size-4);
   text-align: center;
-  line-height: 1.2em; /* Ensure the line-height on <p> matches */
-  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+  line-height: var(--line-height-3); 
+  transition: color 0.3s ease-in-out; 
 }
+
+@media (max-width: 992px) {
+  .testimonial p {
+    font-size: var(--font-size-3);
+  }
+}
+
+
 
 /* Hover effect on the parent .testimonial element */
 .testimonial:hover p {
@@ -1113,44 +1121,16 @@ nav {
 }
 
 
-/* 
-.testimonial .quote-left {
-  font-family: var(--font-family-marker)
-  font-weight: 400;
-  text-align: center;
-  font-size:3em;
-  line-height: 1.25em;
-  background-image:  -webkit-linear-gradient(120deg, rgb(245, 0, 255), rgb(255, 78, 0));
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-
-.testimonial .quote-right {
-  font-family: var(--font-family-marker);
-  font-weight: 400;
-  text-align: center;
-  font-size:3em;
-  line-height: 1.25em;
-  background-image: -webkit-linear-gradient(120deg, rgb(175, 87, 254), rgb(127, 112, 254), rgb(141, 208, 255));
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-}
-*/
-
-
 .testimonial .author {
   color: var(--color-text-secondary);
   padding-top:48px;
   font-family: var(--font-family-base);
-  font-size:16px;
-  line-height: 24px;
-  font-weight: 500;
+  font-size:var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-3);
  }
 
-
+ 
 
 /* FAQ */
 .faq-wrap {
@@ -1164,6 +1144,10 @@ nav {
   text-align: center;
   margin: 24px 0px;
 }
+
+
+
+
 
 .accordion {
   margin: 0px auto;
@@ -1214,6 +1198,10 @@ nav {
 
 .accordion .container.active .content {
   height: 160px;
+
+@media (max-width: 787px) {
+  height: 240px;
+  }
 }
 
 .accordion .container.active .label::before {
