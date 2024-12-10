@@ -709,12 +709,14 @@ span.dot {
   .featured {
     width: 100%;
     padding:12px;
+    filter: grayscale(0%); /* Remove grayscale filter on hover */
   }
 }
 @media (max-width:768px) {
   .featured {
     width: 100%;
     padding:12px;
+    filter: grayscale(0%); /* Remove grayscale filter on hover */
   }
 }
 
@@ -763,6 +765,7 @@ span.dot {
   .thumbs {
   width: 50%;
   padding:12px;
+  filter: grayscale(0%); /* Remove grayscale filter on hover */
      }
   }
 
@@ -770,6 +773,7 @@ span.dot {
   .thumbs {
   width: 100%;
   padding:12px;
+  filter: grayscale(0%); /* Remove grayscale filter on hover */
      }
 }
 
