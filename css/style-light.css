@@ -701,6 +701,7 @@ span.dot {
   position: relative;
   top:0px;
   width: 50%;
+  filter: grayscale(100%); /* Add grayscale filter */
   transition: .3s ease-in-out;
   padding:20px;
 }
@@ -719,6 +720,7 @@ span.dot {
 
 .featured:hover {
   top:-12px;
+  filter: grayscale(0%); /* Remove grayscale filter on hover */
 }
 
 .featured-img {
@@ -750,6 +752,7 @@ span.dot {
   width: 33%;
   transition: .3s ease-in-out;
   padding:20px;
+  filter: grayscale(100%); /* Add grayscale filter */
 }
 
 .thumbs img {
@@ -772,6 +775,7 @@ span.dot {
 
 .thumbs:hover {
   top:-12px;
+  filter: grayscale(0%); /* Remove grayscale filter on hover */
 }
 
 
