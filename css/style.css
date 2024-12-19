@@ -8,76 +8,77 @@
 
 
 
-
     /* Primary Colors */
-    --color-primary: #D72638; /* Primary Button */
+    --color-primary: #F55454; /* Primary Button */
 
   
     /* Background Colors */
     --color-bg: #1C1C1C; /* Background color */
     --color-bg-container: #2A2A2A; /* Light charchoal */
-    --color-bg-crimson: rgb(215, 38, 56, .16); /* Crimson Opacity */
+    --color-bg-accent: rgba(245, 84, 84, .16); /* Crimson Opacity */
     
     
     /* Text */
     --color-text-primary: #E8E8E8; /* Soft white for text and icons */
     --color-text-secondary: #A3A3A3; /* Warm gray for subtle text */
-    --color-text-accent: var(--color-primary); /* Muted cyan for a calm accent */
+    --color-text-accent: var(--color-primary); /* Crimson for accents */
     
-    
-    
-    
+
     /* Status Colors */
     --color-success: #2ecc71; /* Success Green */
     --color-warning: #f39c12; /* Warning Yellow */
     --color-danger: #e74c3c; /* Danger Red */
     --color-info: #3498db; /* Info Blue */
     
+
+
     /* Border Colors */
     --color-border: var(--color-bg-container);
     
-    
+
   
     /* Font sizes */
+    --font-size-caption: 12px;
     --font-size-base: 16px;
-    --font-size-1: 20px;
-    --font-size-2: 24px;
+    --font-size-1: 24px;
+    --font-size-2: 28px;
     --font-size-3: 32px;
-    --font-size-4: 40px;
-    --font-size-5: 56px;
-    --font-size-6: 72px;
+    --font-size-4: 36px;
+    --font-size-5: 48px;
+    --font-size-6: 64px;
+    --font-size-hero: 156px;
+    
+
 
     /* Line heights */
-    --line-height-base: 24px;
-    --line-height-1: 28px;
-    --line-height-2: 32px;
-    --line-height-3: 44px;
-    --line-height-4: 48px;
-    --line-height-5: 64px;
-    --line-height-6: 80px;
+    --line-height-base: 1.6;
+    --line-height-title: 1.4;
+    --line-height-hero: 1.2;
     
-    /* Font weights for different heading levels */
-    --font-weight-1: 300;    /* Light weight for H2 */
-    --font-weight-2: 400;    /* Regular weight for ... */
-    --font-weight-3: 500;    /* Medium weight for base */
-    --font-weight-4: 600;    /* Demi weight for H3 */
-    --font-weight-5: 700;    /* Bold weight for ... */
-    --font-weight-6: 800;    /* Heavy weight for H1 */
-}
 
+
+    /* Font weights for different heading levels */
+    --font-weight-3: 300;    /* Light weight for H2 */
+    --font-weight-4: 400;    /* Regular weight for ... */
+    --font-weight-5: 500;    /* Medium weight for base */
+    --font-weight-6: 600;    /* Demi weight for H3 */
+    --font-weight-7: 700;    /* Bold weight for ... */
+    --font-weight-8: 800;    /* Heavy weight for H1 */
+}
 
 
 * {
   box-sizing: border-box;
   margin:0;
   padding:0;
-  user-select: none;
+  /* user-select: none;
   -webkit-user-drag: none;
-  /* -moz-user-select: none;
+  -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  -ms-user-select: none; */
-}
+  -ms-user-select: none;*/
+} 
+
 
 main {
   margin:0 auto;
@@ -91,12 +92,14 @@ main {
 }
 
 
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0; }
   to {
     opacity: 1; }
   }
+
 
 @-moz-keyframes fadeIn {
   from {
@@ -124,10 +127,9 @@ body {
   background: var(--color-bg);
   color:var(--color-text-primary);
   font-family: var(--font-family-base);
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  text-align: center;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-5);
+  line-height: var(--line-height-base);
   -webkit-font-smoothing: antialiased;
   transition: background-color 1s ease;
   -webkit-animation: fadeIn 2000ms;
@@ -136,15 +138,13 @@ body {
   }
 
   ::selection {
-    color: var(--color-text-accent);
+    background-color: var(--color-bg-accent); /* Change this to your desired highlight color */
   }
 
 
 p {
-  line-height: 24px;
   display: block;
   margin: 0;
-  text-align: left;
   transition: height ,5s;
   -webkit-transition: height ,5s;
   -moz-transition: height ,5s;
@@ -173,9 +173,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 h1 {
-  font-size: 72px;
-  line-height: 88px;
-  font-weight: 800;
+  font-size: var(--font-size-6);
+  line-height: var(--line-height-title);
+  font-weight: var(--font-weight-8);
   }
 h1 span {
   background-image: -webkit-linear-gradient(60deg, rgb(175, 87, 254), rgb(127, 112, 254), rgb(141, 208, 255));
@@ -187,18 +187,18 @@ h1 span {
 
 
 h2 {
-  font-size: 48px;
-  line-height: 64px;
-  font-weight: 400;
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-title);
 }
 
 
 h3 {
-  font-size: 32px;
-  line-height: 40px;
-  font-weight: 700;
-  text-align: left;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-title);
 }
+
 
 h3 span {
   color: var(--color-text-accent);
@@ -206,65 +206,107 @@ h3 span {
 
 
 h4 {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 600;
-  text-align: left;
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-hero);
+}
+
+h4 span {
+  color: var(--color-text-accent);
 }
 
 
 h5 {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 600;
-  text-align: left;
-}
-
-h5.overline {
-  text-align: center;
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-title);
 }
 
 
 .overline {
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
     padding-bottom:12px;
+    color: var(--color-text-secondary);
   }
 
+
 .underline {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 2px;
     text-align: left;
     padding-top: 12px;
     color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
   }
 
-.section-title {
+
+  .section-title {
   margin:0 auto;
   margin-top: 120px;
   margin-bottom: 80px;
-  max-width: 1280px;
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-8);
+  line-height: var(--line-height-title);
+  max-width: 100%;
+  text-align: center; 
+  color: var(--color-text-accent);
 }
-@media (max-width:992px) {
+@media (max-width:992) {
   .section-title {
+    font-size: var(--font-size-5);
+    line-height: var(--line-height-title);
     margin-top: 72px;
     margin-bottom: 72px;
   }
 }
-@media (max-width:768px) {
+@media (max-width:768) {
   .section-title {
+    font-size: var(--font-size-1);
+    line-height: var(--line-height-title);
     margin-top: 36px;
     margin-bottom: 36px;
     }
-  h1 {
-      font-size: 48px;
-      line-height: 56px;
-    }
-  h2 {
-    font-size: 32px;
-    line-height: 40px;
-    }
+}
+
+.section-title {
+h4 {
+  color: var(--color-text-secondary);
+}
+}
+
+.rotating-text {
+  position: relative;
+  height: 300px;
+}
+
+.translation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0; /* Ensure hidden initially */
+  transform: scale(0.8);
+  animation: flip-text 2s ease-in-out forwards;
+  pointer-events: none; /* Prevent interaction */
+}
+
+
+
+@keyframes flip-text {
+  0% { transform: rotateX(90deg); opacity: 0; }
+  20% { transform: rotateX(0); opacity: 1; }
+  70% { transform: rotateX(0); opacity: 1; }
+  90% { transform: rotateX(-90deg); opacity: 0; }
+  100% { transform: rotateX(-90deg); opacity: 0; }
+}
+
+
+
+.abt {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  text-align: center;
 }
 
 .abt-detail {
@@ -352,6 +394,193 @@ hr {
 }
 
 
+
+.resume {
+  margin: 0 auto;
+  display: grid;
+  margin-top: 80px;
+  margin-bottom: 120px;
+  grid-gap: 32px; /* Adds space between sub-sections */
+  max-width: 1280px;
+  width:100%;
+}
+
+@media (max-width:992px) {
+  .resume {
+    grid-gap: 16px; /* Adds space between sub-sections */
+  }
+}
+
+.resume-title p {
+  margin: 0 auto;
+  margin-top: 120px;
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-3);
+  text-align: center;
+  max-width: 1280px;
+}
+@media (max-width:992px) {
+  .resume-title p {
+    font-size: var(--font-size-4);
+    padding: 24px;
+  }
+}
+@media (max-width:768px) {
+  .resume-title p {
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-title);
+    padding: 16px;
+  }
+}
+
+
+
+
+.edu-wrap {
+  margin: 0 auto;
+  margin-top:96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-gap: 32px; /* Adds space between the two columns */
+  max-width: 1280px;
+  width:100%;
+}
+@media (max-width:992px) {
+  .edu-wrap {
+    flex-direction: column;
+    align-items: center;
+    margin-top:48px;
+    grid-template-columns: 1fr; /* Changes to a single column */
+    grid-gap: 16px; /* Adds space between the two columns */
+  }
+}
+
+
+
+.edu {
+  position: relative;
+  top:0px;
+  transition: .3s ease-in-out;
+  border-radius: 12px;
+  padding: 72px 40px;
+  background-color: var(--color-bg-container);
+}
+@media (max-width:768px) {
+    .edu {
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px;
+  }
+}
+
+
+.edu:hover {
+  top:-12px;
+}
+
+
+.edu h5 {
+  text-align:left;
+}
+
+.edu h4 {
+  line-height: 1.2;
+}
+
+
+
+.job-wrap {
+  margin: 0 auto;
+  display: grid;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1280px;
+  grid-gap: 32px; 
+}
+@media (max-width:992px) {
+  .job-wrap { 
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 16px; 
+  }
+}
+
+
+
+/* Job container using Grid */
+.job {
+  position: relative;
+  top:0px;
+  transition: .3s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-gap: 112px; /* Adds space between the two columns */
+  width: 100%;
+  border-radius: 12px;
+  padding: 72px 40px;
+  background-color: var(--color-bg-container);
+}
+
+/* Responsive behavior for the job item */
+@media (max-width: 992px) {
+  .job {
+    grid-template-columns: 1fr; /* Single column layout */
+    padding: 48px 24px;
+    grid-gap: 48px; /* Adds space between the two columns */
+  }
+}
+
+
+.job .overline {
+  text-align: left;
+}
+
+.job:hover {
+top: -12px;
+}
+
+.job:hover .chip {
+  color: var(--color-text-primary); /* Change this to your desired text color */
+}
+
+
+
+/* .job hover effect for both the logo and the detail text */
+.job:hover .company-logo {
+  filter: grayscale(0%); /* Color logo when hovering over .job */
+  opacity: 1;
+}
+
+.job:hover .detail span {
+  color: var(--color-text-accent); /* Change text color when hovering over .job */
+}
+
+/* Position the logo in the bottom left corner */
+.company-logo-link {
+  margin-top: auto; /* Push the logo to the bottom */
+  display: inline-block;
+  padding-top: 32px;
+}
+
+/* Default grayscale logo */
+.company-logo {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+  max-height: 56px;
+  max-width: 240px;
+  opacity: 0.5; /* Make black and white logos less prominent */
+}
+
+
+.overview {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align items at the top */
+  height: 100%; /* Ensure the height fills the available space */
+}
+
+
 .chip-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -371,145 +600,35 @@ hr {
   border-radius: 48px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
   background-color: var(--color-bg);
 }
 
 
-.edu-wrap {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: row;
-  margin-top:96px;
-  max-width: 1280px;
-  width:100%;
-}
-@media (max-width:992px) {
-  .edu-wrap {
-    flex-direction: column;
-    align-items: center;
-    margin-top:48px;
-  }
-}
-
-
-.edu {
-  position: relative;
-  top:0px;
-  transition: .3s ease-in-out;
-  margin-bottom:24px;
-  border-radius: 12px;
-  padding: 48px;
-  margin: 16px;
-  background-color: var(--color-bg-container);
-}
-@media (max-width:776px) {
-    .edu {
-    flex-direction: column;
-    align-items: center;
-    padding: 24px;
-    margin: 16px;
-  }
-}
-
-.edu:hover {
-  top:-12px;
-}
-
-
-.edu h5 {
-  text-align:left;
-}
 
 
 
-
-
-.job-wrap {
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1280px;
-}
-@media (max-width:768px) {
-  .job-wrap > div {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-
-.job {
-  position: relative;
-  top:0px;
-  transition: .3s ease-in-out;
-  display: flex;
-  flex-wrap: wrap;
-  width:100%;
-  border-radius: 12px;
-  padding: 64px 48px;
-  margin:16px;
-  background-color: var(--color-bg-container);
-}
-@media (max-width:768px) {
-  .job {
-    flex-direction: column;
-    align-items: center;
-    margin:16px 0px;
-  }
-}
-
-.job .overline {
-  text-align: left;
-}
-
-.job:hover {
-top: -12px;
-}
-
-
-.job .overview {
-  width:40%;
-  padding-right:24px;
-}
-@media (max-width:992px) {
-  .job .overview {
-    width:100%;
-  }
-}
-
-.job .detail {
-  width:60%;
-}
-@media (max-width:992px) {
-  .job .detail {
-    width:100%;
-  }
-}
 
 .skillset {
   margin: 0 auto;
-  font-size: 66px;
-  line-height:104px;
-  font-weight: 700;
-  padding: 48px;
-  max-width: 1280px;
   color: var(--color-text-secondary);
+  font-size: var(--font-size-6);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-7);
+  max-width: 1280px;
   text-align: center;
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  margin-top:112px;
-  margin-bottom:48px;
+  margin-top:120px;
+  margin-bottom:120px;
 }
 
 @media (max-width:992px) {
   .skillset {
     width:100%;
-    font-size: 40px;
-    font-weight:700;
-    line-height: 56px;
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-6);
     padding: 24px 16px;
   }
 }
@@ -517,9 +636,7 @@ top: -12px;
 @media (max-width:768px) {
   .skillset {
     width:100%;
-    font-size: 32px;
-    font-weight:700;
-    line-height: 56px;
+    font-size: var(--font-size-3);
     padding: 24px 16px;
   }
 }
@@ -532,24 +649,23 @@ span.dot {
 
 
 ::placeholder {
-  font-family: var(--font-family-base);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 24px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-4);
   color: var(--color-bg-container);
 }
 
 .btn {
+  display: block;
+  margin: auto;
   font-family: inherit;
   border: 2px solid var(--color-primary);
-  color: var(--color-text-primary);
+  color: var(--color-bg);
   background-color: var(--color-primary);
   padding: 12px 32px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-6);
   min-width: 200px;
   letter-spacing: .8px;
   line-height: 24px;
@@ -576,8 +692,10 @@ span.dot {
 
 .passport-wrap {
   margin: 0 auto;
-  display: flex;
+  display: grid;
   flex-wrap: row;
+  grid-template-columns: 1fr 1fr 1fr; /* Two equal-width columns */
+  grid-gap: 32px; /* Adds space between the two columns */
   width: 100%;
   max-width: 1280px;
   }
@@ -585,6 +703,8 @@ span.dot {
   .passport-wrap {
     flex-direction: column;
     align-items: center;
+    grid-template-columns: 1fr;
+    grid-gap: 16px; /* Adds space between the two columns */
   }
 }
 
@@ -595,9 +715,8 @@ span.dot {
   transition: .3s ease-in-out;
   border-radius: 12px;
   background-color: var(--color-bg-container);
-  padding: 48px;
-  margin: 16px;
-  width: 100%;
+  padding: 40px;
+  text-align: center;
 }
 
 .passport:hover {
@@ -606,7 +725,7 @@ span.dot {
 
 .passport p {
   text-align:center;
-  padding:64px 48px;
+  padding:72px 24px;
 }
 
 
@@ -654,7 +773,7 @@ span.dot {
 }
 
 .social a:hover {
-  color:var(--color-text-secondary);
+  color:var(--color-text-accent);
 }
 
 
@@ -708,14 +827,14 @@ span.dot {
 @media (max-width:992px) {
   .featured {
     width: 100%;
-    padding:12px;
+    padding:16px;
     filter: grayscale(0%); /* Remove grayscale filter on hover */
   }
 }
 @media (max-width:768px) {
   .featured {
     width: 100%;
-    padding:12px;
+    padding:16px;
     filter: grayscale(0%); /* Remove grayscale filter on hover */
   }
 }
@@ -769,10 +888,10 @@ span.dot {
      }
   }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .thumbs {
   width: 100%;
-  padding:12px;
+  padding:16px;
   filter: grayscale(0%); /* Remove grayscale filter on hover */
      }
 }
@@ -841,22 +960,34 @@ input[type=submit]:hover {
 
 
 nav {
-  font-weight: 600;
+  font-weight: var(--font-weight-6);
 }
-@media (max-width:992px) {
-  nav {
-    padding:0px 12px;
-  }
-}
+
+
 
 /* Header styling */
 .header {
-  overflow: hidden;
-  position: -webkit-sticky;
-  position: sticky;         
-  top: 0;                   
-  z-index: 1000;            
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--color-bg-container);
+  overflow: hidden;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out; /* Smooth transition for responsive state */
+}
+
+/* Left section styling (avatar and name) */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; /* Make it a circular avatar */
+  margin-right: 16px;
 }
 
 /* Style the header links */
@@ -867,12 +998,13 @@ nav {
   text-decoration: none;
   font-size: 16px;
   line-height: 24px;
-  padding:24px;
+  padding: 16px 24px;
 }
-@media (max-width:992px) {
+
+@media (max-width: 992px) {
   .header a {
-    padding-left:12px;
-    padding-right:12px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 
@@ -881,7 +1013,7 @@ nav {
   color: var(--color-text-secondary);
 }
 
-/* Style the active/current link*/
+/* Style the active/current link */
 .header a.active {
   color: var(--color-text-accent);
 }
@@ -891,34 +1023,35 @@ nav {
   float: right;
 }
 
-/* When the screen is less than 992 pixels wide, hide all links, except for the Logo. Show the link that contains should open and close the header */
+/* When the screen is less than 992 pixels wide, hide all links, except for the Logo. Show the link that contains the hamburger icon */
 @media screen and (max-width: 992px) {
-  .header a:not(.logo) {display: none;}
+  .header a:not(.logo) {
+    display: none;
+  }
+
   .header a.icon {
     float: right;
     display: block;
   }
-}
 
-
-/* The "responsive" class is added to the header with JavaScript when the user clicks on the icon. This class makes the header look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 992px) {
-  .header.responsive {position: relative;}
-  .header.responsive a.icon {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .header.responsive a {
-    float: none;
+  /* Links container displayed below the header when in "responsive" mode */
+  .header-links {
     display: block;
     text-align: left;
+    padding: 24px 54px;
+    background-color: var(--color-bg-container);
   }
 
-  .header-right {
-    float: none;
+  /* Each link will stack vertically */
+  .header-links a {
+    display: block;
+    padding: 12px 24px;
   }
 
+  /* Hide the links container by default when screen is above 992px */
+  .header-links {
+    display: none;
+  }
 }
 
 /* Hide the link that should open and close the header on small screens */
@@ -926,102 +1059,15 @@ nav {
   display: none;
 }
 
-
-/* My Process */
-.process {
-  margin:auto;
-  max-width:1280px;
-  margin-bottom:20px;
-}
-
-.process p {
-  margin:24px 0px;
-  font-weight: 500;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.process h4 {
-  text-align: left;
-  margin:20px 0px;
-  font-weight: 700;
-}
-
-.process-description {
-  text-align: center;
-  margin: 24px 0px;
-}
-
-.process-container {
-  border: 1px solid;
-  border-color: rgba(13, 32, 63, .16);
-  border-radius: 12px;
-  padding:40px;
-  background-color: var(--color-bg-container);
-}
-@media (max-width:768px) {
-  .process-container {
-    padding:20px;
-  }
-}
-
-.process-loop {
-  background-image: url(../img/about/loop@2x.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 72%;
-  height: 320px;
-  margin:80px 0px;
-}
-@media (max-width:992px) {
-  .process-loop {
-  background-size: 100%;
-  height: 280px;
-  }
-}
-@media (max-width:768px) {
-  .process-loop {
-  background-size: 100%;
-  height: 220px;
+/* Add rule to hide the links when screen width exceeds 992px */
+@media screen and (min-width: 992px) {
+  .header-links {
+    display: none;
   }
 }
 
 
-.process-content-block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-@media (max-width:992) {
-  .process-content-block {
-  flex-direction: column;
-  }
-}
 
-.process-content-block > div {
-  width: 32%;
-  padding:20px;
-  border-radius: 12px;
-  font-size:12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-@media (max-width:992px) {
-  .process-content-block > div {
-  width: 100%;
-  margin:10px 0px;
-  }
-}
-
-.process-step {
-  position: relative;
-  top:0px;
-  transition: .3s ease-in-out;
-}
-.process-step:hover {
-  top:-12px;
-}
 
 
 
@@ -1086,12 +1132,10 @@ nav {
 .testimonial {
   position: relative;
   top: 0px;
-  font-family: var(--font-family-marker);
-  font-weight: 400;
   text-align: center;
   background: var(--color-bg-container);
   border-radius: 12px;
-  padding: 72px;
+  padding: 72px 48px;
   margin: 20px 0px;
   width: 48%;
   transition: .3s ease-in-out;
@@ -1101,23 +1145,30 @@ nav {
   top: -12px;
 }
 
-@media (max-width: 787px) {
+@media (max-width: 768px) {
   .testimonial {
     width: 100%;
   }
 }
 
 .testimonial p {
+  font-family: var(--font-family-marker);
   color: var(--color-text-secondary);
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-title); 
   text-align: center;
-  line-height: var(--line-height-3); 
   transition: color 0.3s ease-in-out; 
 }
 
 @media (max-width: 992px) {
   .testimonial p {
     font-size: var(--font-size-3);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial p {
+    font-size: var(--font-size-2);
   }
 }
 
@@ -1146,10 +1197,10 @@ nav {
   margin-top: 120px;
   width: 100%;
   max-width:1280px;
+  text-align: center;
 }
 
 .faq-description {
-  text-align: center;
   margin: 24px 0px;
 }
 
@@ -1182,9 +1233,6 @@ nav {
   padding: 24px 0px;
 }
 
-.accordion .label:hover {
-  color: var(--color-text-accent);
-}
 
 .accordion .label::before {
   content: '+';
@@ -1207,7 +1255,7 @@ nav {
 .accordion .container.active .content {
   height: 160px;
 
-@media (max-width: 787px) {
+@media (max-width: 768px) {
   height: 240px;
   }
 }
@@ -1260,10 +1308,10 @@ footer {
 /* Slider Container Styles */
 .slider-container {
   width: 100%;
-  background-color: var(--color-bg-crimson);
+  background-color: var(--color-bg-accent);
   overflow: hidden;
   position: relative;
-  padding: 32px 0px;
+  padding: 16px 0px;
 }
 
 
@@ -1306,3 +1354,124 @@ footer {
   }
 }
 
+
+
+
+
+/* Floating icon container */
+.palette-floating-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+
+/* Floating icon */
+.palette-floating-icon {
+  background-color: var(--color-bg-container);
+  color: var(--color-primary); /* This will affect the SVG fill color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circle */
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--shadow-hover);
+  cursor: pointer;
+  transition: background-color var(--transition-duration), transform var(--transition-duration);
+}
+
+/* Hover effect for the icon */
+.palette-floating-icon:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* SVG Styling */
+.palette-floating-icon svg {
+  width: 28px; /* Adjust to your preference */
+  height: 28px;
+  fill: currentColor; /* Ensures it inherits the `color` property */
+  transition: fill var(--transition-duration);
+}
+
+.palette-floating-icon:hover svg {
+  color: var(--color-bg); /* Changes the SVG fill color on hover */
+}
+
+/* Palette options container */
+.palette-options {
+  display: none; /* Hidden initially */
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  background-color: var(--color-bg-container);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-hover);
+  padding: 12px;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity var(--transition-duration);
+  flex-direction: column;  /* Stack the color boxes vertically */
+  align-items: center;  /* Center the color boxes */
+}
+
+/* Show the options when the container is active (clicked) */
+.palette-floating-container.active .palette-options {
+  display: flex;
+  opacity: 1; /* Fade in options */
+}
+
+/* Individual color boxes */
+.palette-box {
+  display: block; /* Ensures the boxes are stacked vertically */
+  width: 40px;
+  height: 40px;
+  margin: 4px 0;  /* Space between boxes */
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: transform var(--transition-duration);
+}
+
+.palette-box:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/* Optionally, add a border or shadow for better visibility */
+.palette-box:active {
+  box-shadow: var(--shadow-hover);
+}
+
+
+
+
+
+/* Floating badge container */
+.floating-badge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Shared styles for the SVGs */
+.floating-badge svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction with the SVG */
+}
+
+/* Rotating badge specific styles */
+.rotating-badge {
+  transform-origin: center; /* Ensure rotation happens around the center */
+}

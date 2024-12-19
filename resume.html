@@ -10,7 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="css/style-light.css"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
       <!-- <link rel="stylesheet" type="text/css" href="css/style-light.css" /> -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43972553-1"></script>
@@ -24,464 +24,531 @@
 <script type="text/javascript" src="js/smooth.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
 <script src="js/header.js"></script>
+<script src="js/badge.js"></script>
+<script src="js/color-palette.js" defer></script>
 </head>
 
 <body id="top">
   <nav>
     <div class="header" id="myHeader">
-      <a href="index.html" class="logo">Bulent Design Studio</a>
-      <!-- <a href="index.html" class="logo"><img src="img/logo/bds-logo.svg" height="20px" alt=""></a> -->
+      <div class="header-left">
+        <a href="index.html" style="display: flex; align-items: center; justify-content: center;">
+          <img src="img/avatar/avtr.bulent.400@2x.jpg" class="header-logo" alt="Bulent Keles Avatar">Bulent Keles
+        </a>
+      </div>
       <div class="header-right">
         <a href="index.html">Works</a>
         <a href="about.html">About</a>
         <a class="active" href="resume.html">Resume</a>
         <a href="https://bulentkeles.myportfolio.com/contact" target="_blank">Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <img src="img/icons/hamburger.svg" alt="">
-        </a>
+          <img src="img/icons/hamburger.svg" alt="Menu Icon">
+        </a>        
       </div>
+    </div>
+  
+    <!-- This is the new div for links -->
+    <div class="header-links">
+      <a class="active" href="index.html">Works</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="https://bulentkeles.myportfolio.com/contact" target="_blank">Contact</a>
     </div>
   </nav>
+
+
+
+
+
+  <div class="palette-floating-container">
+    <div class="palette-floating-icon">
+      <!-- Your SVG icon here -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+        <path d="M19 12.1294L12.9388 18.207C11.1557 19.9949 10.2641 20.8889 9.16993 20.9877C8.98904 21.0041 8.80705 21.0041 8.62616 20.9877C7.53195 20.8889 6.64039 19.9949 4.85726 18.207L2.83687 16.1811C1.72104 15.0622 1.72104 13.2482 2.83687 12.1294M19 12.1294L10.9184 4.02587M19 12.1294H2.83687M10.9184 4.02587L2.83687 12.1294M10.9184 4.02587L8.89805 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M22 20C22 21.1046 21.1046 22 20 22C18.8954 22 18 21.1046 18 20C18 18.8954 20 17 20 17C20 17 22 18.8954 22 20Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    </div>
+  
+<!-- Palette options (Color boxes) -->
+<div class="palette-options">
+  <div class="palette-box" style="background-color: #F55454;" data-palette="0"></div>
+  <div class="palette-box" style="background-color: #70CDFF;" data-palette="1"></div>
+  <div class="palette-box" style="background-color: #AEFF93;" data-palette="2"></div>
+  <div class="palette-box" style="background-color: #CB98FF;" data-palette="3"></div>
+  <div class="palette-box" style="background-color: #FFFF76;" data-palette="4"></div>
+</div>
+</div>
+
+
+
+
 <main>
-
-
 <!-- Title -->
-  <section>
-    <div class="section-title">
-      <h2>I'm a multidisciplinary designer with a passion in graphic and software design. I'm currently designing product experiences, full-time at Accenture and working side gigs with tech startups in silicon valley</h2>
-    </div>
-</section> 
-
-
-
-<!-- Education -->
-<section class="edu-wrap">
-    
-    <div class="edu">
-      <h5 class="overline">2004</h5>
-      <h3>Management Information Systems <br><span>Boston, MA</span></h3></br>
-      <p>Specialized in Information Systems within a program emphasizing the design and application of data systems to enhance decision-making in dynamic business environments.</p><br>
-    </div>
-    <div class="edu">
-      <h5 class="overline">2016</h5>
-      <h3>UX Design Immersive General Assembly<br><span>San Francisco, CA</span></h3></br>
-      <p>Completed an intensive three-month UX design program, gaining expertise in user-centered design and the importance of rapid prototyping and testing in fast-paced work environments.</p><br>
-    </div>
-</section>
-
-
-<!-- Experience -->
-<section class="job-wrap">  
-  <!-- Accenture -->
-  <div class="job">  
-    <div class="overview">
-      <div>
-        <h5 class="overline">2019 - Present</h5>
-        <h3>Design Manager <br> <span>Accenture</span</h3>
-        <h5 class="underline">Istanbul, Turkey</h5>
-      </div>
-      
-      <div class="chip-wrap">
-        <div class="chip">Automotive</div>
-        <div class="chip">Energy</div>
-        <div class="chip">Government</div>    
-        <div class="chip">Life Sciences</div>
-        <div class="chip">SAAS</div>
-        <div class="chip">E-Commerce</div>
-      </div>
-    </div>
-
-    <div class="detail">
-      <p><span style="font-weight: bold;">Role</span></p>  
-      <p>I led design efforts for next-gen products across platforms like web, mobile, digital signage, and in-car interfaces, delivering innovative, user-centered solutions. I managed a design team, driving vision, agile practices, and execution, while contributing to research, visual design, prototyping, and implementation. Additionally, I explored GenAI applications, presented concepts to clients, and established design standards to enhance team performance and client satisfaction. </p><br><br>
-      
-
-      <p><span style="font-weight: bold;">Deliverables</span></p>
-      <p>
-        iOS Apps,
-        Android apps,
-        Web Apps,
-        Design Systems,
-        Responsive Design,
-        Presentations,
-        Digital Signage,
-        HMI Design,
-        Custom Touchscreen Design,
-        User Research,
-        Usability Reviews,
-        Personas,
-        Design Talks,
-        Client Workshops,
-        Protoypes,
-        Wireframes and more.
-      </p><br><br>
-
-      <p><span style="font-weight: bold;">Clients</span></p>
-        <p>Fortune 500 Companies</p></br><br>
-
-        <p><span style="font-weight: bold;">About</span></p><p>Accenture is a global professional services company providing services in strategy, consulting, digital, technology, and operations.</p>
-      </br><br>
-    </div>
-  </div>
-
-  <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
-      
-      <ul>
-        <li>Building an effective design team</li>
-        <li>Assisting and empowering team members</li>
-        <li>Establishing agile design practices</li>
-        <li>Creating an organizational design culture</li>
-        <li>Creating design concepts to assist team</li>
-        <li>Working with engineers for better collaboration</li>
-        <li>Designing end-to-end solutions</li>
-        <li>Taking part in client engagements</li>
-        <li>Establishing design standards for team</li>
-        <li>Developing and contributing to design systems</li>
-        <li>Overseeing day-to-day design efforts</li>
-        <li>Providing vision and roadmap for the design team</li>
-      </ul><br> -->
-
-<!-- Freelance -->
-<div class="job">
-  <div class="overview">
+  <div class="resume-title">
     <div>
-      <h5 class="overline">2016 - Present</h5>
-      <h3>Freelance Designer <br><span>Startups</span></h3>
-      <h5 class="underline">San Francisco (Remote)</h5>
+      <p>I'm a multidisciplinary designer with a passion in graphic and software design. I'm currently designing product experiences, full-time at Accenture and working side gigs with tech startups in silicon valley</p>
     </div>
-    
-    <div class="chip-wrap">
-      <div class="chip chip-blue">Sports</div>
-      <div class="chip chip-blue">Real-Estate</div>
-      <div class="chip chip-blue">Publishing</div>
-      <div class="chip chip-blue">Healthy-Living</div>
-    </div>
-  </div>
+  </div> 
 
-  <div class="detail">
-    <p><span style="font-weight: bold;">Role</span></p>
-    <p>As a Freelance Designer, I collaborated with San Francisco tech startups to design apps, marketing sites, logos, and more. I conducted usability tests, crafted personas, wireframes, and prototypes, and developed visual guidelines for user-friendly solutions. I also researched product needs, tested market fit, and worked closely with engineers and clients to deliver impactful designs.
-    </p><br><br>
-    
-    <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
-        <ul>
-          <li>User behavior analysis</li>
-          <li>User persona creation</li>
-          <li>Creating graphics & interactions</li>
-          <li>Developing advanced wireframes</li>
-          <li>Building prototypes and testing hypotheses</li>
-          <li>Building new brands for new products</li>
-          <li>Mapping out user flows and site structures</li>
-          <li>Creating marketing material</li>
-          <li>Establishing visual design guidelines</li>
-          <li>Creating and delivering consistent iconography</li>
-          <li>Presenting to product teams</li>
-          <li>Understanding product requirements</li>
-          <li>Testing product-market fit</li>
-          <li>Communicating with engineers for better workflows</li>
-          <li>Developing and contributing to the design system</li>
-        </ul><br> -->
+<section class="resume">
+  <!-- Education -->
+  <div class="edu-wrap">
+      
+      <div class="edu">
+        <div class="overline">2004</div>
+        <h4>Management Information Systems <br><span>Boston, MA</span></h4></br>
+        <p>Specialized in Information Systems within a program emphasizing the design and application of data systems to enhance decision-making in dynamic business environments.</p><br>
+      </div>
+      <div class="edu">
+        <div class="overline">2016</div>
+        <h4>Design Immersive General Assembly<br><span>San Francisco, CA</span></h4></br>
+        <p>Completed an intensive three-month UX design program, gaining expertise in user-centered design and the importance of rapid prototyping and testing in fast-paced work environments.</p><br>
+      </div>
+    </div>
+
+
+  <!-- Experience -->
+  <div class="job-wrap">  
+    <!-- Accenture -->
+    <div class="job">  
+      <div class="overview">
+        <div>
+          <div class="overline">2019 - Present</div>
+          <h4>Design Manager <br> <span>Accenture</span</h4>
+          <div class="underline">Istanbul, Turkey</div>
+        </div>
+        
+        <div class="chip-wrap">
+          <div class="chip">Automotive</div>
+          <div class="chip">Energy</div>
+          <div class="chip">Government</div>    
+          <div class="chip">Life Sciences</div>
+          <div class="chip">SAAS</div>
+          <div class="chip">E-Commerce</div>
+        </div>
+
+        <a href="https://www.accenture.com" target="_blank" class="company-logo-link">
+          <img src="img/logos/acn.svg" alt="Accenture" class="company-logo">
+      </a>
+      </div>
+
+      <div class="detail">
+        <p><span style="font-weight: bold;">Role</span></p>  
+        <p>I led design efforts for next-gen products across platforms like web, mobile, digital signage, and in-car interfaces, delivering innovative, user-centered solutions. I managed a design team, driving vision, agile practices, and execution, while contributing to research, visual design, prototyping, and implementation. Additionally, I explored GenAI applications, presented concepts to clients, and established design standards to enhance team performance and client satisfaction. </p><br><br>
+        
 
         <p><span style="font-weight: bold;">Deliverables</span></p>
         <p>
           iOS Apps,
-          Web Design,
+          Android apps,
+          Web Apps,
+          Design Systems,
           Responsive Design,
-          Landing Pages,
-          E-mailing,
           Presentations,
-          Protoypes,
-          Wireframes,
-          Branding,
-          Logo Design,
-          Illustrations,
-          UX Research,
-          Journey Mapping,          
+          Digital Signage,
+          HMI Design,
+          Custom Touchscreen Design,
+          User Research,
+          Usability Reviews,
           Personas,
-          Usability Studies.
-        </p>
-        </br><br>
+          Design Talks,
+          Client Workshops,
+          Protoypes,
+          Wireframes and more.
+        </p><br><br>
 
         <p><span style="font-weight: bold;">Clients</span></p>
-        <p>Silicon Valley Tech Startups</p></br><br>
+          <p>Fortune 500 Companies</p></br><br>
 
-
-        <p><span style="font-weight: bold;">About</span></p><p>Throughout my freelance career I worked with companies in commercial real estate, healthy living, athlete performance, publishing, and more. </p></br><br>
-  </div>
-</div>
-     
-<!-- Kolektif Labs -->
-<div class="job">
-  <div class="overview">
-    <div>
-      <h5 class="overline">2017 - 2017</h5>
-      <h3>UI/UX Designer <br> <span>Kolektif Labs</span></h3>
-      <h5 class="underline">Istanbul, Turkey</h5>
+          <p><span style="font-weight: bold;">About</span></p><p>Accenture is a global professional services company providing services in strategy, consulting, digital, technology, and operations.</p>
+      </div>
     </div>
-    
-    <div class="chip-wrap">
-      <div class="chip chip-blue">Sports</div>
-      <div class="chip chip-blue">Finance</div>
-      <div class="chip chip-blue">Retail</div>
-      <div class="chip chip-blue">Social Impact</div>
-    </div>
-  </div>
 
-  <div class="detail">
-    <p><span style="font-weight: bold;">Role</span></p>
-    <p>At Kolektif Labs, I collaborated with client teams and developers in an agile workflow to create user-centered designs across sports, finance, and technology industries. I developed concepts, wireframes, and prototypes, presenting them for user testing and client feedback to inform and refine design decisions. Additionally, I streamlined collaboration by establishing clear design processes and fostering efficient communication between clients and developers.</p><br><br>
-
-   
-  <!-- <p><span style="font-weight: bold;">Key Responsibilities</span></p>
-    <ul>
-      <li>Creating end-to-end designs for client projects</li>
-      <li>Developing concept designs to support sales</li>
-      <li>Designing wireframes and prototypes for testing</li>
-      <li>Conducting client presentations</li>
-      <li>Developing & communicating internal design processes</li>
-      <li>Working with third parties to discover data requirements</li>
-      <li>Organizing and delivering investor pitches</li>
-      <li>Collaborating with clients to understand user needs</li>
-    </ul><br> -->
-
-
-    <p><span style="font-weight: bold;">Deliverables</span></p>
-    <p>
-      iOS App,
-      Web Design,
-      Responsive Design,
-      Presentations Design,
-      Protoypes,
-      Wireframes,
-      Branding,
-      Logo Design,
-      Design Process,
-      Investor Relations,
-      Sales Deck,
-      Credentials, and more.
-    </p></br><br>
-
-    <p><span style="font-weight: bold;">About</span></p><p>Kolektif Labs is a boutique design studio based in Istanbul serving clients from various industries including sports, finance, and technology.</p></br><br>
-  </div>
-</div>
-
-
-<!-- InnovationBox -->
-<div class="job">
-  <div class="overview">
-    <div>
-      <h5 class="overline">2016 - 2017</h5>
-      <h3>UI/UX Designer <br> <span>InnovationBox</span></h3>
-      <h5 class="underline">Istanbul, Turkey</h5>
-    </div>
-    
-    <div class="chip-wrap">
-      <div class="chip chip-blue">Publishing</div>
-      <div class="chip chip-blue">Technology</div>
-      <div class="chip chip-blue">Telecom</div>
-    </div>    
-  </div>
-
-  <div class="detail">
-    
-    <p><span style="font-weight: bold;">Role</span></p>
-        <p>At InnovationBox, I focused on delivering high-quality web and mobile applications by establishing design standards and collaborating closely with clients to understand their needs. I created wireframes, prototypes, and POCs to effectively communicate design ideas and functionality. Additionally, I prepared RFPs and supported sales efforts with compelling presentations, helping secure new projects.</p></br><br>
-
-      <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
+    <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
+        
         <ul>
-          <li>Designing wireframes and prototypes</li>
-          <li>Preparing for RFPs</li>
-          <li>Creating graphics to support sales</li>
-          <li>Developing client presentations</li>
-          <li>Establishing design standards</li>
-          <li>Developing internal design process</li>
-          <li>Collaborating with client teams to understand needs</li>
+          <li>Building an effective design team</li>
+          <li>Assisting and empowering team members</li>
+          <li>Establishing agile design practices</li>
+          <li>Creating an organizational design culture</li>
+          <li>Creating design concepts to assist team</li>
+          <li>Working with engineers for better collaboration</li>
+          <li>Designing end-to-end solutions</li>
+          <li>Taking part in client engagements</li>
+          <li>Establishing design standards for team</li>
+          <li>Developing and contributing to design systems</li>
+          <li>Overseeing day-to-day design efforts</li>
+          <li>Providing vision and roadmap for the design team</li>
         </ul><br> -->
 
-        <p><span style="font-weight: bold;">Deliverables</span></p>
+  <!-- Freelance -->
+  <div class="job">
+    <div class="overview">
+      <div>
+        <div class="overline">2016 - Present</div>
+        <h4>Freelance Designer <br><span>Startups</span></h4>
+        <div class="underline">San Francisco (Remote)</div>
+      </div>
+      
+      <div class="chip-wrap">
+        <div class="chip chip-blue">Sports</div>
+        <div class="chip chip-blue">Real-Estate</div>
+        <div class="chip chip-blue">Publishing</div>
+        <div class="chip chip-blue">Healthy-Living</div>
+      </div>
+
+      <a href="https://bulentkeles.com" target="_blank" class="company-logo-link">
+        <img style="border-radius: 50%;" src="img/avatar/avtr.bulent.400@2x.jpg" alt="Kolektif Labs" class="company-logo">
+    </a>
+    </div>
+
+    <div class="detail">
+      <p><span style="font-weight: bold;">Role</span></p>
+      <p>As a Freelance Designer, I collaborated with San Francisco tech startups to design apps, marketing sites, logos, and more. I conducted usability tests, crafted personas, wireframes, and prototypes, and developed visual guidelines for user-friendly solutions. I also researched product needs, tested market fit, and worked closely with engineers and clients to deliver impactful designs.
+      </p><br><br>
+      
+      <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
+          <ul>
+            <li>User behavior analysis</li>
+            <li>User persona creation</li>
+            <li>Creating graphics & interactions</li>
+            <li>Developing advanced wireframes</li>
+            <li>Building prototypes and testing hypotheses</li>
+            <li>Building new brands for new products</li>
+            <li>Mapping out user flows and site structures</li>
+            <li>Creating marketing material</li>
+            <li>Establishing visual design guidelines</li>
+            <li>Creating and delivering consistent iconography</li>
+            <li>Presenting to product teams</li>
+            <li>Understanding product requirements</li>
+            <li>Testing product-market fit</li>
+            <li>Communicating with engineers for better workflows</li>
+            <li>Developing and contributing to the design system</li>
+          </ul><br> -->
+
+          <p><span style="font-weight: bold;">Deliverables</span></p>
           <p>
-            iOS App,
+            iOS Apps,
             Web Design,
             Responsive Design,
+            Landing Pages,
+            E-mailing,
             Presentations,
-            Event Design,
+            Protoypes,
+            Wireframes,
+            Branding,
             Logo Design,
-            Design Talks,
-            Sales Pitches,
-            Credentials, and more.
-          </p></br><br>
+            Illustrations,
+            UX Research,
+            Journey Mapping,          
+            Personas,
+            Usability Studies.
+          </p>
+          </br><br>
 
-      <p><span style="font-weight: bold;">About</span></p>
-        <p>InnovationBox is a digital product design studio based in Istanbul, best known for its popular iOS utility apps and expertise in mobile application design and development.</p></br><br>
-  </div>
-</div>
+          <p><span style="font-weight: bold;">Clients</span></p>
+          <p>Silicon Valley Tech Startups</p></br><br>
 
 
-<!-- Valensas -->
-<div class="job">
-  <div class="overview">
-    <div>
-      <h5 class="overline">2012 - 2016</h5>
-      <h3>Product & Marketing <br><span>Valensas</span></h3>
-      <h5 class="underline">Istanbul, Turkey</h5>
+          <p><span style="font-weight: bold;">About</span></p><p>Throughout my freelance career I worked with companies in commercial real estate, healthy living, athlete performance, publishing, and more. </p>
     </div>
-    
-    <div class="chip-wrap">
-      <div class="chip chip-blue">Aviation</div>
-      <div class="chip chip-blue">Pharmaceutical</div>
-      <div class="chip chip-blue">Technology</div>
-      <div class="chip chip-blue">Finance</div>
-      <div class="chip chip-blue">Publishing</div>
-    </div>    
+  </div>
+      
+  <!-- Kolektif Labs -->
+  <div class="job">
+    <div class="overview">
+      <div>
+        <div class="overline">2017 - 2017</div>
+        <h4>UI/UX Designer<br> <span>Kolektif Labs</span></h4>
+        <div class="underline">Istanbul, Turkey</div>
+      </div>
+
+      <div class="chip-wrap">
+        <div class="chip chip-blue">Sports</div>
+        <div class="chip chip-blue">Finance</div>
+        <div class="chip chip-blue">Retail</div>
+        <div class="chip chip-blue">Social Impact</div>
+      </div>
+
+      <!-- Link containing the SVG logo -->
+    <a href="https://www.kolektifhouse.co" target="_blank" class="company-logo-link">
+      <!-- Inline SVG -->
+      <img src="img/logos/kolektif.labs.png" alt="Kolektif Labs" class="company-logo">
+    </a>
+    </div>
+
+    <div class="detail">
+      <p><span style="font-weight: bold;">Role</span></p>
+      <p>At Kolektif Labs, I collaborated with client teams and developers in an agile workflow to create user-centered designs across sports, finance, and technology industries. I developed concepts, wireframes, and prototypes, presenting them for user testing and client feedback to inform and refine design decisions. Additionally, I streamlined collaboration by establishing clear design processes and fostering efficient communication between clients and developers.</p><br><br>
+
+  
+      <p><span style="font-weight: bold;">Deliverables</span></p>
+      <p>
+        iOS App,
+        Web Design,
+        Responsive Design,
+        Presentations Design,
+        Protoypes,
+        Wireframes,
+        Branding,
+        Logo Design,
+        Design Process,
+        Investor Relations,
+        Sales Deck,
+        Credentials, and more.
+      </p></br><br>
+
+       <!-- <p><span style="font-weight: bold;">Key Responsibilities</span></p>
+      <ul>
+        <li>Creating end-to-end designs for client projects</li>
+        <li>Developing concept designs to support sales</li>
+        <li>Designing wireframes and prototypes for testing</li>
+        <li>Conducting client presentations</li>
+        <li>Developing & communicating internal design processes</li>
+        <li>Working with third parties to discover data requirements</li>
+        <li>Organizing and delivering investor pitches</li>
+        <li>Collaborating with clients to understand user needs</li>
+      </ul><br> -->
+
+      <p><span style="font-weight: bold;">About</span></p><p>Kolektif Labs is a boutique design studio based in Istanbul serving clients from various industries including sports, finance, and technology.</p>
+    </div>
   </div>
 
-  <div class="detail">
-    <p><span style="font-weight: bold;">Role</span></p>
-    <p>I played a key role in designing and delivering innovative products like Workbuk, Veacon, and VDP. I managed product roadmaps, gathered user requirements, and translated insights into wireframes, prototypes, and marketing materials. My responsibilities included designing user-centered experiences across desktop apps, iOS apps, and responsive web platforms, as well as creating branding, investor pitches, and digital marketing strategies. Collaborating closely with engineers and stakeholders, I planned product strategies, organized launches, developed support systems, and ensured product success by aligning user needs with business goals.</p><br><br>
-    
 
-    <p><span style="font-weight: bold;">Deliverables</span></p>
-    <p>
-      Desktop & Mobile App Designs, Marketing Material, Presentations, Investor Pitches
-    </p></br><br>
+  <!-- InnovationBox -->
+  <div class="job">
+    <div class="overview">
+      <div>
+        <div class="overline">2016 - 2017</div>
+        <h4>UI/UX Designer <br> <span>InnovationBox</span></h4>
+        <div class="underline">Istanbul, Turkey</div>
+      </div>
+      
+      <div class="chip-wrap">
+        <div class="chip chip-blue">Publishing</div>
+        <div class="chip chip-blue">Technology</div>
+        <div class="chip chip-blue">Telecom</div>
+      </div>    
 
-    
-    <p><span style="font-weight: bold;">About</span></p>
-    <p>Valensas is an enterprise mobility and product company with a track record of successfully delivering countless apps to clients in finance, aviation, publishing and more.</p></br><br>
+        <!-- Link containing the SVG logo -->
+    <a href="https://www.innovationbox.com" target="_blank" class="company-logo-link">
+        <!-- Inline SVG -->
+        <img src="img/logos/ibx@3x.png" alt="InnovationBox" class="company-logo">
+    </a>
+    </div>
+
+    <div class="detail">
+      
+      <p><span style="font-weight: bold;">Role</span></p>
+          <p>At InnovationBox, I focused on delivering high-quality web and mobile applications by establishing design standards and collaborating closely with clients to understand their needs. I created wireframes, prototypes, and POCs to effectively communicate design ideas and functionality. Additionally, I prepared RFPs and supported sales efforts with compelling presentations, helping secure new projects.</p></br><br>
 
         <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
           <ul>
-            <li>Designing product experiences</li>
-            <li>Gathering user requirements</li>
-            <li>Analysing user data</li>          
-            <li>Designing wireframes and POCs</li>
-            <li>Designing marketing materials</li>
-            <li>Collaborating with engineers about product roadmap</li>
-            <li>Developing support systems</li>
-            <li>Planning product strategy and roadmap</li>
-            <li>Product Design of Workbuk</li>
-            <li>Product Design of Veacon</li>
-            <li>Product Design of VDP</li>
-            <li>Organizing product launches</li>
-            <li>Understanding user needs</li>        
-            <li>Managing client engagemments</li>
-            <li>Organizing and delivering investor pitches</li>
-            <li>Managing entire product roadmap</li>
+            <li>Designing wireframes and prototypes</li>
+            <li>Preparing for RFPs</li>
+            <li>Creating graphics to support sales</li>
+            <li>Developing client presentations</li>
+            <li>Establishing design standards</li>
+            <li>Developing internal design process</li>
+            <li>Collaborating with client teams to understand needs</li>
           </ul><br> -->
 
-        
-  </div>
-</div>
+          <p><span style="font-weight: bold;">Deliverables</span></p>
+            <p>
+              iOS App,
+              Web Design,
+              Responsive Design,
+              Presentations,
+              Event Design,
+              Logo Design,
+              Design Talks,
+              Sales Pitches,
+              Credentials, and more.
+            </p></br><br>
 
-<!-- Grey Worldwide -->
-<div class="job">
-  <div class="overview">
-    <div>
-      <h5 class="overline">2010 - 2012</h5>
-      <h3>Digital Marketing Manager <br> 
-        <span>Grey Worldwide</span></h3>
-      <h5 class="underline">Istanbul, Turkey</h5>
-    </div>
-    
-    <div class="chip-wrap">
-      <div class="chip chip-blue">Automotive</div>
-      <div class="chip chip-blue">Aviation</div>
-      <div class="chip chip-blue">Finance</div>
-      <div class="chip chip-blue">Retail</div>
-      <div class="chip chip-blue">Telecom</div>
+        <p><span style="font-weight: bold;">About</span></p>
+          <p>InnovationBox is a digital product design studio based in Istanbul, best known for its popular iOS utility apps and expertise in mobile application design and development.</p>
     </div>
   </div>
 
-  
 
-  <div class="detail">
-    <p><span style="font-weight: bold;">Role</span></p>
-    <p>I developed successful online and offline campaigns across traditional media, social media and content marketing channels. I created compelling designs and content to bring marketing visions to life and presented information effectively to diverse audiences. By analyzing market trends and social media performance, I identified opportunities to inform strategic decisions. I also nurtured brand communities online through engaging content and developed digital brand strategies for clients. As a liaison between creative, technical, and client teams, I ensured smooth campaign execution, on time and within budget. Additionally, I represented the agency in industry associations, contributed articles on marketing trends, and helped build an in-house digital marketing team.
-    </p>
-      </br>
-      </br>
-
-    <p><span style="font-weight: bold;">Deliverables</span></p>
-      <p>
-        Web Design & Development, Landing Pages, Social Media Marketing, E-mail Marketing, Content Marketing, Presentation Design, Brand Strategy, Analytics, Influencer Marketing, Video Marketing
-      </p>
-        </br>
-        </br>
-
-      <p><span style="font-weight: bold;">Clients</span></p>
-      <p>
-        Nike, HSBC, Chevrolet, IKEA, Allianz, Turkish Airlines, Vodafone
-      </p>
-        </br>
-        </br>
-    
-    <p><span style="font-weight: bold;">About</span></p>
-    <p>Part of WPP, Grey Worldwide with offices in 94 countries ranks among largest global advertising companies in the world.</p></br>
+  <!-- Valensas -->
+  <div class="job">
+    <div class="overview">
+      <div>
+        <div class="overline">2012 - 2016</div>
+        <h4>Product & Marketing <br><span>Valensas</span></h4>
+        <div class="underline">Istanbul, Turkey</div>
+      </div>
       
-      <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
+      <div class="chip-wrap">
+        <div class="chip chip-blue">Aviation</div>
+        <div class="chip chip-blue">Pharmaceutical</div>
+        <div class="chip chip-blue">Technology</div>
+        <div class="chip chip-blue">Finance</div>
+        <div class="chip chip-blue">Publishing</div>
+      </div>    
+
+<!-- Link containing the SVG logo -->
+<a href="https://valensas.com" target="_blank" class="company-logo-link">
+  <!-- Inline SVG -->
+  <img src="img/logos/valensas.svg" alt="Valensas Technology" class="company-logo">
+</a>
+    </div>
+
+    <div class="detail">
+      <p><span style="font-weight: bold;">Role</span></p>
+      <p>I played a key role in designing and delivering innovative products like Workbuk, Veacon, and VDP. I managed product roadmaps, gathered user requirements, and translated insights into wireframes, prototypes, and marketing materials. My responsibilities included designing user-centered experiences across desktop apps, iOS apps, and responsive web platforms, as well as creating branding, investor pitches, and digital marketing strategies. Collaborating closely with engineers and stakeholders, I planned product strategies, organized launches, developed support systems, and ensured product success by aligning user needs with business goals.</p><br><br>
       
-        <ul>
-          <li>Developed digital brand strategies for clients.</li>
-          <li>Acted as liaison between creative, technical and client teams.</li>
-          <li>Represented agency as a member of various industry associations.</li>
-          <li>Submitted articles and reports on current issues and challenges.</li>
-          <li>Developed brand communications and strategy for clients.</li>
-          <li>Made sure campaign was executed well, on time andon budget.</li>
-          <li>Created consumer reports and trend presentations for clients.</li>
-          <li>Helped build in-house digital marketing team.</li>
-        </ul></br> -->
+
+      <p><span style="font-weight: bold;">Deliverables</span></p>
+      <p>
+        Desktop & Mobile App Designs, Marketing Material, Presentations, Investor Pitches
+      </p></br><br>
+
+      
+      <p><span style="font-weight: bold;">About</span></p>
+      <p>Valensas is an enterprise mobility and product company with a track record of successfully delivering countless apps to clients in finance, aviation, publishing and more.</p>
+
+          <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
+            <ul>
+              <li>Designing product experiences</li>
+              <li>Gathering user requirements</li>
+              <li>Analysing user data</li>          
+              <li>Designing wireframes and POCs</li>
+              <li>Designing marketing materials</li>
+              <li>Collaborating with engineers about product roadmap</li>
+              <li>Developing support systems</li>
+              <li>Planning product strategy and roadmap</li>
+              <li>Product Design of Workbuk</li>
+              <li>Product Design of Veacon</li>
+              <li>Product Design of VDP</li>
+              <li>Organizing product launches</li>
+              <li>Understanding user needs</li>        
+              <li>Managing client engagemments</li>
+              <li>Organizing and delivering investor pitches</li>
+              <li>Managing entire product roadmap</li>
+            </ul><br> -->
 
           
+    </div>
   </div>
-</div>
-</section>
 
-
-<!-- Language -->
-<section class="passport-wrap">
-
-  <div class="passport">
-    <div>
-      <p class="overline">Native <br> Turkish</p>
-      <div class="flag tr"></div>
+  <!-- Grey Worldwide -->
+  <div class="job">
+    <div class="overview">
       <div>
-        <h1>99%</h1>
-        <p>Turkish is my native tongue but there's always room to learn</p>
+        <div class="overline">2010 - 2012</div>
+        <h4>Digital Marketing Manager <br> 
+          <span>Grey Worldwide</span></h4>
+        <div class="underline">Istanbul, Turkey</div>
       </div>
+      
+      <div class="chip-wrap">
+        <div class="chip chip-blue">Automotive</div>
+        <div class="chip chip-blue">Aviation</div>
+        <div class="chip chip-blue">Finance</div>
+        <div class="chip chip-blue">Retail</div>
+        <div class="chip chip-blue">Telecom</div>
+      </div>
+
+      <!-- Link containing the SVG logo -->
+  <a href="https://www.grey.com" target="_blank" class="company-logo-link">
+    <!-- Inline SVG -->
+    <img src="img/logos/grey.svg" alt="Grey Worldwide" class="company-logo">
+  </a>
+    </div>
+
+    
+
+    <div class="detail">
+      <p><span style="font-weight: bold;">Role</span></p>
+      <p>I developed successful online and offline campaigns across traditional media, social media and content marketing channels. I created compelling designs and content to bring marketing visions to life and presented information effectively to diverse audiences. By analyzing market trends and social media performance, I identified opportunities to inform strategic decisions. I also nurtured brand communities online through engaging content and developed digital brand strategies for clients. As a liaison between creative, technical, and client teams, I ensured smooth campaign execution, on time and within budget. Additionally, I represented the agency in industry associations, contributed articles on marketing trends, and helped build an in-house digital marketing team.
+      </p>
+        </br>
+        </br>
+
+      <p><span style="font-weight: bold;">Deliverables</span></p>
+        <p>
+          Web Design & Development, Landing Pages, Social Media Marketing, E-mail Marketing, Content Marketing, Presentation Design, Brand Strategy, Analytics, Influencer Marketing, Video Marketing
+        </p>
+          </br>
+          </br>
+
+        <p><span style="font-weight: bold;">Clients</span></p>
+        <p>
+          Nike, HSBC, Chevrolet, IKEA, Allianz, Turkish Airlines, Vodafone
+        </p>
+          </br>
+          </br>
+      
+      <p><span style="font-weight: bold;">About</span></p>
+      <p>Part of WPP, Grey Worldwide with offices in 94 countries ranks among largest global advertising companies in the world.</p>
+        
+        <!-- <p><span style="font-weight: bold;">Key Responsibilities:</span></p>
+        
+          <ul>
+            <li>Developed digital brand strategies for clients.</li>
+            <li>Acted as liaison between creative, technical and client teams.</li>
+            <li>Represented agency as a member of various industry associations.</li>
+            <li>Submitted articles and reports on current issues and challenges.</li>
+            <li>Developed brand communications and strategy for clients.</li>
+            <li>Made sure campaign was executed well, on time andon budget.</li>
+            <li>Created consumer reports and trend presentations for clients.</li>
+            <li>Helped build in-house digital marketing team.</li>
+          </ul></br> -->
+
+            
+    </div>
   </div>
   </div>
 
+
+  <!-- Language -->
+  <div class="passport-wrap">
+
     <div class="passport">
       <div>
-        <p class="overline">Fluent <br> English</p>
-        <div class="flag uk">
-        </div>
+        <p class="overline">Native <br> Turkish</p>
+        <div class="flag tr"></div>
         <div>
-          <h1>93%</h1>
-          <p>I'm fluent in English. Score is based on Duolingo English Tests.</p>
+          <h1>99%</h1>
+          <p>Turkish is my native tongue but there's always room to learn</p>
         </div>
     </div>
     </div>
 
-    <div class="passport">
-      <div>
-        <p class="overline">Beginner <br> German</p>
-          <div class="flag de">
+      <div class="passport">
+        <div>
+          <p class="overline">Fluent <br> English</p>
+          <div class="flag uk">
           </div>
           <div>
-         <h1>34%</h1>
-         <p>I'm learning German. Score is based on Duolingo Deutsch Tests.</p>
-       </div>
+            <h1>93%</h1>
+            <p>I'm fluent in English. Score is based on Duolingo English Tests.</p>
+          </div>
       </div>
-    </div>
+      </div>
 
+      <div class="passport">
+        <div>
+          <p class="overline">Beginner <br> German</p>
+            <div class="flag de">
+            </div>
+            <div>
+          <h1>34%</h1>
+          <p>I'm learning German. Score is based on Duolingo Deutsch Tests.</p>
+        </div>
+        </div>
+      </div>
+
+    </div>
 </section>
 
 
-
-<section>
-    <div>
-      <p class="skillset">
+<div>
+    <div class="skillset">
+      <p>
         Product Design
         <span class="dot"> • </span>
         Visual Design
@@ -584,7 +651,7 @@
     <div>
       <button class="btn" onclick="window.open('cv/bulentkeles-resume.pdf')" type="button" name="download">Download Resume</button>
     </div>
-</section>
+  </div>
 </main>
 
 
@@ -612,21 +679,65 @@
 
 
 
+
+  <!-- Rotating Badge -->
+<a href="cv/bulentkeles-resume.pdf" class="floating-badge" download target="_blank">
+  <!-- Static Part of the Badge -->
+  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" color="#ffffff">
+    <path class="cls-1" d="M260.8,198.67c0-5.9-4.79-10.69-10.69-10.69s-10.69,4.79-10.69,10.69v42.62l-4.55-4.55c-4.18-4.18-10.94-4.18-15.12,0-4.18,4.18-4.18,10.94,0,15.12l14.75,14.75c4.75,4.75,8.84,8.84,15.62,8.84s10.89-4.09,15.64-8.84l14.75-14.75c4.18-4.18,4.18-10.94,0-15.12-4.18-4.18-10.94-4.18-15.12,0l-4.57,4.57v-42.64Z" fill="currentColor"/>
+    <path class="cls-1" d="M215.78,312.03h68.44c5.9,0,10.69-4.79,10.69-10.69s-4.79-10.69-10.69-10.69h-68.44c-5.9,0-10.69,4.79-10.69,10.69s4.79,10.69,10.69,10.69Z" fill="currentColor"/>
+  </svg>
+
+
+  <!-- Rotating Part of the Badge -->
+  <svg class="rotating-badge" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" color="#ffffff">
+    <g fill="currentColor">
+      <path class="cls-1" d="M378.83,341.38l10.23,8.31-6.62,8.15-17.09.13-11.22,13.81,19.33-.54c-2.5,6.63-1.65,13.09,4.06,17.73,8.29,6.74,18.24,2.62,25.79-6.67l20.06-24.68-34.77-28.25-9.77,12.02ZM404.9,362.57l-9.48,11.67c-2.54,3.13-5.25,4.64-8.23,2.22-2.98-2.42-2.06-5.38.48-8.51l9.48-11.67,7.75,6.3Z"/>
+      <polygon class="cls-1" points="310 398.03 315.86 407.65 344.82 389.99 348.05 395.29 324.94 409.38 330.33 418.23 353.45 404.14 356.41 409.01 328.05 426.29 333.92 435.91 375.33 410.66 352.02 372.41 310 398.03"/>
+      <path class="cls-1" d="M286.35,420.32c-8.28,1.06-10.95.85-11.4-1.28-.47-2.19,2.37-3.91,8.62-5.26,8.57-1.85,16.57-.88,22.38,1.79l5.68-10.39c-8.21-3.79-18.75-4.67-30.13-2.22-16.2,3.49-23.33,11.44-21.29,20.89,2.24,10.38,13.23,10.96,28.12,9,7.19-.96,11.23-1.37,11.68.76.51,2.38-4.5,4.04-8.94,5-6.57,1.42-12.67,1.35-18.31-.83l-5.34,10.45c7.22,2.83,16.75,3,25.95,1.02,14.2-3.06,23.52-10.56,21.46-20.14-2.16-10.01-14.76-10.5-28.47-8.79Z"/>
+      <path class="cls-1" d="M229.02,404.73c-17-2.28-27.68,5.14-29.51,18.84l-3.14,23.47,15.48,2.07,2.98-22.26c.88-6.6,4.95-10.9,12.56-9.88,7.67,1.03,10.46,6.25,9.58,12.84l-2.98,22.26,15.48,2.07,3.14-23.47c1.84-13.7-6.58-23.67-23.58-25.95Z"/>
+      <polygon class="cls-1" points="185.58 394.86 172.39 417.62 168.43 392.16 167.76 391.78 143.65 400.96 156.84 378.2 143.5 370.46 121.02 409.22 135.37 417.54 158.23 408.23 161.39 432.63 176.12 441.17 198.59 402.41 185.58 394.86"/>
+      <polygon class="cls-1" points="110.48 327.71 101.65 334.71 122.72 361.29 117.86 365.15 101.04 343.93 92.91 350.37 109.73 371.59 105.27 375.13 84.63 349.1 75.8 356.1 105.95 394.11 141.05 366.28 110.48 327.71"/>
+    </g>
+    <g fill="currentColor">
+      <path class="cls-1" d="M98.63,205.97c4.86-16.72.04-29.72-13.54-33.67-13.64-3.97-24.62,4.44-29.48,21.16l-7.29,25.08,43.02,12.51,7.29-25.08ZM86.84,203.87l-2.57,8.85-20.16-5.86,2.57-8.85c2.39-8.24,7.44-12.3,13.96-10.41,6.51,1.89,8.6,8.03,6.2,16.27Z"/>
+      <path class="cls-1" d="M88.67,164.7c12.16,9.27,26.2,5.01,37.06-9.24,10.9-14.3,11.3-28.96-.86-38.24-12.16-9.27-26.2-5.01-37.1,9.29-10.87,14.25-11.26,28.91.9,38.19ZM97.5,133.92c5.28-6.92,11.91-8.54,17.76-4.08,5.85,4.46,6.04,11.29.76,18.21s-11.91,8.54-17.76,4.08c-5.85-4.46-6-11.34-.76-18.21Z"/>
+      <polygon class="cls-1" points="165.36 116.72 159.41 87.13 181.4 107.77 194.76 100.33 187.2 53.26 173.73 60.76 180.08 90.04 157.8 69.64 145.56 76.47 151.19 106.15 129.63 85.35 115.93 92.98 152 124.16 165.36 116.72"/>
+      <polygon class="cls-1" points="224.39 93.99 222.15 67.26 250.28 91.82 263.93 90.67 260.19 46.03 245.14 47.29 247.17 71.52 222.12 49.22 205.66 50.59 209.4 95.24 224.39 93.99"/>
+      <polygon class="cls-1" points="315.07 91.53 287.22 84.46 295.3 52.64 280.17 48.8 269.14 92.22 312.13 103.13 315.07 91.53"/>
+      <path class="cls-1" d="M335.14,119.11c15.06,9.83,29.72,9.15,38.08-3.66,8.36-12.81,3.08-26.5-11.99-36.33-15.01-9.79-29.67-9.11-38.03,3.7-8.36,12.81-3.07,26.5,11.93,36.29ZM336.45,91.46c4.02-6.16,10.87-6.82,18.1-2.1,7.29,4.76,9.4,11.25,5.38,17.42-4.02,6.17-10.81,6.85-18.1,2.1-7.29-4.76-9.4-11.25-5.38-17.42Z"/>
+      <path class="cls-1" d="M444.36,193.34l-7.29-25.08-42.03,12.22,22.17-44.87-10.16-13.58-49.48,8.65,9.74,13.01,8.39-1.72,13.42,17.93-4.01,7.56,9.77,13.05-.83.24,7.29,25.08c4.86,16.72,15.9,25.11,29.48,21.16,13.64-3.97,18.4-16.95,13.54-33.67ZM394.38,150.07l-7.75-10.35,14.94-3.11-7.19,13.46ZM426.37,211.71c-6.51,1.89-11.56-2.17-13.96-10.41l-2.57-8.85,20.16-5.86,2.57,8.85c2.39,8.24.31,14.37-6.2,16.27Z"/>
+    </g>
+  </svg>
+</a>
+
+
+
+
 <div class="slider-container">
   <div class="slider-text">
-    <p>Download My Resume</p>
-    <p>Let's Build Something</p>
-    <p>Explore My Skills</p>
-    <p>Let's Talk</p>
+    <p>Automotive</p>
+    <p>Life Sciences</p>
+    <p>E-Commerce</p>
+    <p>Energy</p>
+    <p>Finance</p>
+    <p>Government</p>
+    <p>Media</p>
+    <p>Publishing</p>
+    <p>Advertising</p>
     
     <!-- Duplicate items for seamless loop -->
-    <p>Download My Resume</p>
-    <p>Let's Build Something</p>
-    <p>Explore My Skills</p>
-    <p>Let's Talk</p>
+    <p>Automotive</p>
+    <p>Life Sciences</p>
+    <p>E-Commerce</p>
+    <p>Energy</p>
+    <p>Finance</p>
+    <p>Government</p>
+    <p>Media</p>
+    <p>Publishing</p>
+    <p>Advertising</p>
   </div>
 </div>
-
 
 </body>
 </html>

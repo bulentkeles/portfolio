@@ -1,9 +1,12 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
   var x = document.getElementById("myHeader");
-  if (x.className === "header") {
-    x.className += " responsive";
+  var links = document.querySelector(".header-links");
+  
+  // Toggle the display of the header-links div
+  if (links.style.display === "block") {
+    links.style.display = "none";
   } else {
-    x.className = "header";
+    links.style.display = "block";
   }
 }
