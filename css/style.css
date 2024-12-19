@@ -45,7 +45,7 @@
     --font-size-3: 32px;
     --font-size-4: 36px;
     --font-size-5: 48px;
-    --font-size-6: 64px;
+    --font-size-6: 72px;
     --font-size-hero: 156px;
     
 
@@ -252,20 +252,17 @@ h5 {
   text-align: center; 
   color: var(--color-text-accent);
 }
-@media (max-width:992) {
+@media (max-width:1280px) {
   .section-title {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-6);
     line-height: var(--line-height-title);
-    margin-top: 72px;
-    margin-bottom: 72px;
   }
 }
-@media (max-width:768) {
+
+@media (max-width:768px) {
   .section-title {
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-4);
     line-height: var(--line-height-title);
-    margin-top: 36px;
-    margin-bottom: 36px;
     }
 }
 
@@ -274,11 +271,40 @@ h4 {
   color: #A3A3A3;
 }
 }
+@media (max-width:1280px) {
+  .section-title h4 {
+    font-size: var(--font-size-2);
+    margin-bottom: 16px;
+    line-height: var(--line-height-title);
+  }
+}
+
+@media (max-width:768px) {
+  .section-title h4 {
+    font-size: var(--font-size-base);
+    margin-bottom: 16px;
+    line-height: var(--line-height-title);
+    }
+}
+
 
 .rotating-text {
   position: relative;
   height: 300px;
 }
+
+@media (max-width:1280px) {
+  .rotating-text {
+  height: 120px;
+  }
+}
+
+@media (max-width:768px) {
+  .rotating-text {
+  height: 48px;
+  }
+}
+
 
 .translation {
   position: absolute;
@@ -419,7 +445,7 @@ hr {
   text-align: center;
   max-width: 1280px;
 }
-@media (max-width:992px) {
+@media (max-width:1200px) {
   .resume-title p {
     font-size: var(--font-size-4);
     padding: 24px;
@@ -820,7 +846,7 @@ span.dot {
   position: relative;
   top:0px;
   width: 50%;
-  filter: grayscale(100%); /* Add grayscale filter */
+  /*filter: grayscale(100%);  Add grayscale filter */
   transition: .3s ease-in-out;
   padding:20px;
 }
@@ -873,7 +899,7 @@ span.dot {
   width: 33%;
   transition: .3s ease-in-out;
   padding:20px;
-  filter: grayscale(100%); /* Add grayscale filter */
+  /*filter: grayscale(100%);  Add grayscale filter */
 }
 
 .thumbs img {
