@@ -1561,7 +1561,7 @@ footer {
 
 @media (max-width: 768px) {
   .custom-alert-content {
-  width: 100%;
+  width: 80%;
 }
 }
 
