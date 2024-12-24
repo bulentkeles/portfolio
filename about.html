@@ -306,6 +306,27 @@
 </div>
 
 
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">
+  <div class="custom-alert-content">
+    <div class="copyright-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#000" fill="none">
+      <path d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" />
+      <path d="M15 14C15 15.1046 14.1046 16 13 16H12C11.0681 16 10.6022 16 10.2346 15.8478C9.74458 15.6448 9.35523 15.2554 9.15224 14.7654C9 14.3978 9 13.9319 9 13V11C9 10.0681 9 9.60218 9.15224 9.23463C9.35523 8.74458 9.74458 8.35523 10.2346 8.15224C10.6022 8 11.0681 8 12 8H13C14.1046 8 15 8.89543 15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  </svg>
+  </div>
+    <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" onclick="closeAlert()">
+      <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <p><b>Not cool man!</b><p>Kidding, but seriously copying is disabled.</p></p>
+  </div>
+</div>
+
+
+
+
+
 <script src="js/app.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -325,14 +346,21 @@ for (i = 0; i < acc.length; i++) {
 }
 </script>
 
+
 <script>
   document.addEventListener('copy', function(e) {
-    e.preventDefault(); // This prevents copying the selected text
-    alert('Not cool! Copying is disabled on this page');
+    e.preventDefault(); // Prevent the default copy action
+  
+    // Show the custom alert
+    document.getElementById('customAlert').style.display = 'flex';
   });
-</script>
-
-
+  
+  function closeAlert() {
+    // Hide the custom alert when the close icon is clicked
+    document.getElementById('customAlert').style.display = 'none';
+  }
+  </script>
+  
 
 
 </body>
