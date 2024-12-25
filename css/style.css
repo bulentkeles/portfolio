@@ -464,6 +464,7 @@ hr {
 
 
 
+
 .edu-wrap {
   margin: 0 auto;
   margin-top:96px;
@@ -484,14 +485,15 @@ hr {
 }
 
 
-
 .edu {
   position: relative;
+  overflow: hidden;
   top:0px;
   transition: .3s ease-in-out;
   border-radius: 12px;
   padding: 72px 40px;
   background-color: var(--color-bg-container);
+  z-index: 1; /* Ensure text content is above the background image */
 }
 @media (max-width:768px) {
     .edu {
@@ -500,6 +502,19 @@ hr {
     padding: 48px 24px;
   }
 }
+
+
+.badge img {
+  position: absolute;
+  visibility: visible;
+  top: -240px; /* Adjust to position the badge above the text content */
+  right: -240px; /* Adjust for horizontal alignment */
+  width: 480px; /* Control the size of the badge */
+  height: 480px;
+  z-index: -1; /* Ensure the badge image is placed behind the text */
+  filter: grayscale(100%); /* Color logo when hovering over .job */
+}
+
 
 
 .edu:hover {
@@ -514,6 +529,9 @@ hr {
 .edu h4 {
   line-height: 1.2;
 }
+
+
+
 
 
 
@@ -1552,7 +1570,7 @@ footer {
   align-items: center;
   text-align: center;
   background-color: var(--color-bg-container);
-  padding: 96px 24px;
+  padding: 48px 24px 96px 24px;
   border-radius: 10px;
   width: 50%;
   max-width: 500px;
