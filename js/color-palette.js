@@ -1,5 +1,14 @@
-// Updated color palettes - Now includes a fourth palette
+// Updated color palettes - Now includes a fifth palette
 const colorPalettes = [
+  {
+    '--color-primary': '#5A5A5C',
+    '--color-bg': '#1C1C1C',
+    '--color-bg-container': '#2A2A2A',
+    '--color-bg-accent': 'rgba(90, 90, 92, 0.16)',
+    '--color-text-primary': '#E8E8E8',
+    '--color-text-secondary': '#A3A3A3',
+    '--color-text-accent': '#5A5A5C',
+  },
   {
     '--color-primary': '#F55454',
     '--color-bg': '#1C1C1C',
@@ -45,6 +54,7 @@ const colorPalettes = [
     '--color-text-secondary': '#A3A3A3',
     '--color-text-accent': '#FFFF76',
   }
+  
 ];
 
 // Function to apply the selected color palette

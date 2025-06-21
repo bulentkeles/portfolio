@@ -354,7 +354,7 @@ h5 {
   padding:20px;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1280px) {
   .abt-detail > div {
     width:48%;
     padding:24px 0px;
@@ -447,7 +447,7 @@ hr {
   text-align: center;
   max-width: 1280px;
 }
-@media (max-width:1200px) {
+@media (max-width:1280px) {
   .resume-title p {
     font-size: var(--font-size-4);
     padding: 24px;
