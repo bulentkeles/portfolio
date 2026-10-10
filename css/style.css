@@ -16,6 +16,8 @@
     --color-bg: #1C1C1C; /* Background color */
     --color-bg-container: #2A2A2A; /* Light charchoal */
     --color-bg-accent: rgba(245, 84, 84, .16); /* Crimson Opacity */
+    --color-bg-grid: rgba(255, 255, 255, 0.035);
+    --header-height: 80px;
     
     
     /* Text */
@@ -128,7 +130,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 
 body {
-  background: var(--color-bg);
+  position: relative;
+  background-color: var(--color-bg);
   color:var(--color-text-primary);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
@@ -140,6 +143,23 @@ body {
   -moz-animation: fadeIn 2000ms;
   animation: fadeIn 2000ms;
   }
+
+body::before {
+  content: "";
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  height: calc(100vh - var(--header-height));
+  background-image:
+    linear-gradient(var(--color-bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-bg-grid) 1px, transparent 1px);
+  background-size: 72px 72px;
+  background-position: center top;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+}
 
   ::selection {
     background-color: var(--color-bg-accent); /* Change this to your desired highlight color */
