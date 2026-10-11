@@ -1478,11 +1478,22 @@ footer {
   width: 28px; /* Adjust to your preference */
   height: 28px;
   fill: currentColor; /* Ensures it inherits the `color` property */
-  transition: fill var(--transition-duration);
+  transform-origin: center;
+  transition: fill var(--transition-duration), transform var(--transition-duration);
+}
+
+.palette-floating-icon svg path {
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
 .palette-floating-icon:hover svg {
   color: var(--color-bg); /* Changes the SVG fill color on hover */
+  animation: paintBucketTilt 1.4s ease-in-out infinite;
+}
+
+.palette-floating-icon:hover svg path:last-child {
+  animation: paintDropPulse 1.4s ease-in-out infinite;
 }
 
 /* Palette options container */
@@ -1563,10 +1574,44 @@ footer {
   fill: var(--color-primary); /* Apply color-bg to all SVGs on hover */
 }
 
+.floating-badge:hover svg:first-of-type path:first-child {
+  animation: downloadArrowBounce 1.2s ease-in-out infinite;
+}
+
 
 /* Rotating badge specific styles */
 .rotating-badge {
   transform-origin: center; /* Ensure rotation happens around the center */
+}
+
+.floating-badge svg:first-of-type path {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes paintBucketTilt {
+  0%, 100% { transform: rotate(0deg); }
+  45% { transform: rotate(-8deg) translateY(-1px); }
+  70% { transform: rotate(3deg); }
+}
+
+@keyframes paintDropPulse {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+  45% { transform: translateY(2px) scale(1.08); opacity: 0.85; }
+}
+
+@keyframes downloadArrowBounce {
+  0%, 100% { transform: translateY(0); }
+  45% { transform: translateY(14px); }
+  70% { transform: translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .palette-floating-icon:hover svg,
+  .palette-floating-icon:hover svg path:last-child,
+  .floating-badge:hover svg:first-of-type path:first-child {
+    animation: none;
+  }
 }
 
 
