@@ -147,6 +147,7 @@ body {
 body::before {
   content: "";
   position: absolute;
+  z-index: -1;
   top: var(--header-height);
   left: 0;
   right: 0;
@@ -1001,6 +1002,7 @@ span.dot {
 input[type=text], input[type=email], select, textarea {
   width: 100%; /* Full width */
   height:56px;
+  font-family: inherit;
   padding: 12px; /* Some padding */
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -1009,7 +1011,11 @@ input[type=text], input[type=email], select, textarea {
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
 }
 
 textarea {
@@ -1035,7 +1041,7 @@ textarea {
 }
 
 .form-status.success {
-  color: var(--color-success);
+  color: var(--color-primary);
 }
 
 .form-status.error {
@@ -1048,6 +1054,11 @@ input[type=submit] {
   padding: 12px 40px;
   cursor: pointer;
   height:56px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: semibold;
+
 }
 
 input[type=submit]:disabled {
@@ -1059,6 +1070,13 @@ input[type=submit]:disabled {
 input[type=submit]:hover {
   color: var(--color-primary);
   border: 2px solid var(--color-primary);
+}
+
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* Add a background color and some padding around the form */
