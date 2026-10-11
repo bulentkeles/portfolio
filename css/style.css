@@ -159,6 +159,7 @@ body::before {
   pointer-events: none;
   mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+  transition: top var(--transition-duration), height var(--transition-duration);
 }
 
   ::selection {
@@ -725,7 +726,7 @@ span.dot {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   font-weight: var(--font-weight-4);
-  color: var(--color-bg-container);
+  color: var(--color-text-secondary);
 }
 
 .btn {
@@ -997,14 +998,48 @@ span.dot {
 
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
+input[type=text], input[type=email], select, textarea {
   width: 100%; /* Full width */
   height:56px;
   padding: 12px; /* Some padding */
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-container);
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+textarea {
+  min-height: 200px;
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
+}
+
+.form-honeypot {
+  display: none;
+}
+
+.form-status {
+  min-height: 24px;
+  margin-top: 16px;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-6);
+  letter-spacing: .8px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-status.success {
+  color: var(--color-success);
+}
+
+.form-status.error {
+  color: var(--color-danger);
 }
 
 /* Style the submit button with a specific background color etc */
@@ -1013,6 +1048,11 @@ input[type=submit] {
   padding: 12px 40px;
   cursor: pointer;
   height:56px;
+}
+
+input[type=submit]:disabled {
+  cursor: wait;
+  opacity: 0.7;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
@@ -1114,8 +1154,20 @@ nav {
   .header-links {
     display: block;
     text-align: left;
-    padding: 24px 54px;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 54px;
     background-color: var(--color-bg-container);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: max-height var(--transition-duration), padding var(--transition-duration), opacity var(--transition-duration), transform var(--transition-duration);
+  }
+
+  .header-links.is-open {
+    max-height: 260px;
+    padding: 24px 54px;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   /* Each link will stack vertically */
@@ -1124,10 +1176,6 @@ nav {
     padding: 12px 24px;
   }
 
-  /* Hide the links container by default when screen is above 992px */
-  .header-links {
-    display: none;
-  }
 }
 
 /* Hide the link that should open and close the header on small screens */
