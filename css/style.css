@@ -364,6 +364,12 @@ h5 {
   margin-top: 120px;
   margin-bottom: 120px;
   text-align: center;
+  transform-origin: center;
+  transition: transform .3s ease-in-out;
+}
+
+.abt:hover {
+  transform: scale(1.025);
 }
 
 .abt-detail {
@@ -787,7 +793,9 @@ span.dot {
 .passport {
   position: relative;
   top:0px;
-  transition: .3s ease-in-out;
+  z-index: 0;
+  transform-origin: center;
+  transition: top .3s ease-in-out, transform .3s ease-in-out;
   border-radius: 12px;
   background-color: var(--color-bg-container);
   padding: 40px;
@@ -796,6 +804,8 @@ span.dot {
 
 .passport:hover {
   top:-12px;
+  z-index: 1;
+  transform: scale(1.025);
 }
 
 .passport p {
@@ -808,11 +818,36 @@ span.dot {
 .flag {
   margin:0 auto;
   width:120px;
-  height:120px;
-  background-size: 120px;
+  aspect-ratio: 1;
+  background-size: 100%;
   background-repeat: no-repeat;
   margin-bottom:48px;
   border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  transform-origin: center;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1), border-radius 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.passport:hover .flag {
+  transform: scale(1.7);
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .passport,
+  .flag {
+    transition: none;
+  }
+
+  .passport:hover {
+    top: 0;
+    transform: none;
+  }
+
+  .passport:hover .flag {
+    transform: none;
+  }
 }
 
 
@@ -1240,21 +1275,48 @@ nav {
   }
 
   
-  .avatar:hover {
-    top:-12px;
-  }
-
-
   .bulent {
+    position: relative;
     background-image: url("../img/avatar/bulent.keles.bw@2x.png");
     background-color: var(--color-primary);
     background-size: 160px;
     height: 160px;
     width: 160px;
+    transform-origin: center;
+    transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .bulent:hover {
+  .bulent::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
     background-image: url("../img/avatar/bulent.keles.color@2x.png");
+    background-size: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 420ms ease-in-out;
+  }
+
+  .abt:hover .bulent {
+    transform: scale(1.16);
+  }
+
+  .abt:hover .bulent::after {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .abt,
+    .bulent,
+    .bulent::after {
+      transition: none;
+    }
+
+    .abt:hover,
+    .abt:hover .bulent {
+      transform: none;
+    }
   }
 
   .tobias {
